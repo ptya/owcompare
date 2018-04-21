@@ -1,166 +1,166 @@
 const heroes = {
-  "ana": [
+  "ana": 
     {
       "name": "Ana",
       "type": "Support"
     }
-  ],    	
-  "bastion": [
+  ,    	
+  "bastion": 
     {
       "name": "Bastion",
       "type": "Defense"
     }
-  ],
-  "brigitte": [
+  ,
+  "brigitte": 
     {
       "name": "Brigitte",
       "type": "Support"
     }
-  ],
-  "dva": [
+  ,
+  "dva": 
     {
       "name": "D.Va",
       "type": "Tank"
     }
-  ], 
-  "doomfist": [
+  , 
+  "doomfist": 
     {
       "name": "Doomfist",
       "type": "Offense"
     }
-  ],
-  "genji": [
+  ,
+  "genji": 
     {
       "name": "Genji",
       "type": "Offense"
     }
-  ],
-  "hanzo": [
+  ,
+  "hanzo": 
     {
       "name": "Hanzo",
       "type": "Defense"
     }
-  ],
-  "junkrat": [
+  ,
+  "junkrat": 
     {
       "name": "Junkrat",
       "type": "Defense"
     }
-  ],
-  "lucio": [
+  ,
+  "lucio": 
     {
       "name": "Lúcio",
       "type": "Support"
     }
-  ],
-  "mccree": [
+  ,
+  "mccree": 
     {
       "name": "McCree",
       "type": "Offense"
     }
-  ],
-  "mei": [
+  ,
+  "mei": 
     {
       "name": "Mei",
       "type": "Defense"
     }
-  ],
-  "mercy": [
+  ,
+  "mercy": 
     {
       "name": "Mercy",
       "type": "Support"
     }
-  ],
-  "moira": [
+  ,
+  "moira": 
     {
       "name": "Moira",
       "type": "Support"
     }
-  ],
-  "orisa": [
+  ,
+  "orisa": 
     {
       "name": "Orisa",
       "type": "Tank"
     }
-  ],
-  "pharah": [
+  ,
+  "pharah": 
     {
       "name": "Pharah",
       "type": "Offense"
     }
-  ],
-  "reaper": [
+  ,
+  "reaper": 
     {
       "name": "Reaper",
       "type": "Offense"
     }
-  ],
-  "reinhardt": [
+  ,
+  "reinhardt": 
     {
       "name": "Reinhardt",
       "type": "Tank"
     }
-  ],
-  "roadhog": [
+  ,
+  "roadhog": 
     {
       "name": "Roadhog",
       "type": "Tank"
     }
-  ],
-  "soldier-76": [
+  ,
+  "soldier-76": 
     {
       "name": "Soldier: 76",
       "type": "Offense"
     }
-  ],
-  "sombra": [
+  ,
+  "sombra": 
     {
       "name": "Sombra",
       "type": "Offense"
     }
-  ],
-  "symmetra": [
+  ,
+  "symmetra": 
     {
       "name": "Symmetra",
       "type": "Support"
     }
-  ],
-  "torbjorn": [
+  ,
+  "torbjorn": 
     {
       "name": "Torbjorn",
       "type": "Defense"
     }
-  ],
-  "tracer": [
+  ,
+  "tracer": 
     {
       "name": "Tracer",
       "type": "Offense"
     }
-  ],
-  "widowmaker": [
+  ,
+  "widowmaker": 
     {
       "name": "Widowmaker",
       "type": "Defense"
     }
-  ],
-  "winston": [
+  ,
+  "winston": 
     {
       "name": "Winston",
       "type": "Tank"
     }
-  ],
-  "zarya": [
+  ,
+  "zarya": 
     {
       "name": "Zarya",
       "type": "Tank"
     }
-  ],
-  "zenyatta": [
+  ,
+  "zenyatta": 
     {
       "name": "Zenyatta",
       "type": "Support"
     }
-  ]
+  
 };
 
 export default heroes;

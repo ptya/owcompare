@@ -3,6 +3,6 @@ import { render } from 'react-dom';
 
 import Router from './components/Router';
 
-import './index.css';
+//import './index.css';
 
 render(<Router />, document.getElementById('root'));
