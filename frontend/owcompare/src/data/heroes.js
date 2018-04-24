@@ -1,166 +1,226 @@
 const heroes = {
-  "ana": 
+  ana: 
     {
-      "name": "Ana",
-      "type": "Support"
+      id: "ana",
+      name: "Ana",
+      type: "Support",
+      img: "/images/changeme.jpg"
     }
   ,    	
-  "bastion": 
+  bastion: 
     {
-      "name": "Bastion",
-      "type": "Defense"
+      id: "bastion",
+      name: "Bastion",
+      type: "Defense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "brigitte": 
+  brigitte: 
     {
-      "name": "Brigitte",
-      "type": "Support"
+      id: "brigitte",
+      name: "Brigitte",
+      type: "Support",
+      img: "/images/changeme.jpg"
     }
   ,
-  "dva": 
+  dva: 
     {
-      "name": "D.Va",
-      "type": "Tank"
+      id: "dva",
+      name: "D.Va",
+      type: "Tank",
+      img: "/images/changeme.jpg"
     }
   , 
-  "doomfist": 
+  doomfist: 
     {
-      "name": "Doomfist",
-      "type": "Offense"
+      id: "doomfist",
+      name: "Doomfist",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "genji": 
+  genji: 
     {
-      "name": "Genji",
-      "type": "Offense"
+      id: "genji",
+      name: "Genji",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "hanzo": 
+  hanzo: 
     {
-      "name": "Hanzo",
-      "type": "Defense"
+      id: "hanzo",
+      name: "Hanzo",
+      type: "Defense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "junkrat": 
+  junkrat: 
     {
-      "name": "Junkrat",
-      "type": "Defense"
+      id: "junkrat",
+      name: "Junkrat",
+      type: "Defense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "lucio": 
+  lucio: 
     {
-      "name": "Lúcio",
-      "type": "Support"
+      id: "lucio",
+      name: "Lúcio",
+      type: "Support",
+      img: "/images/changeme.jpg"
     }
   ,
-  "mccree": 
+  mccree: 
     {
-      "name": "McCree",
-      "type": "Offense"
+      id: "mccree",
+      name: "McCree",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "mei": 
+  mei: 
     {
-      "name": "Mei",
-      "type": "Defense"
+      id: "mei",
+      name: "Mei",
+      type: "Defense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "mercy": 
+  mercy: 
     {
-      "name": "Mercy",
-      "type": "Support"
+      id: "mercy",
+      name: "Mercy",
+      type: "Support",
+      img: "/images/changeme.jpg"
     }
   ,
-  "moira": 
+  moira: 
     {
-      "name": "Moira",
-      "type": "Support"
+      id: "moira",
+      name: "Moira",
+      type: "Support",
+      img: "/images/changeme.jpg"
     }
   ,
-  "orisa": 
+  orisa: 
     {
-      "name": "Orisa",
-      "type": "Tank"
+      id: "orisa",
+      name: "Orisa",
+      type: "Tank",
+      img: "/images/changeme.jpg"
     }
   ,
-  "pharah": 
+  pharah: 
     {
-      "name": "Pharah",
-      "type": "Offense"
+      id: "pharah",
+      name: "Pharah",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "reaper": 
+  reaper: 
     {
-      "name": "Reaper",
-      "type": "Offense"
+      id: "reaper",
+      name: "Reaper",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "reinhardt": 
+  reinhardt: 
     {
-      "name": "Reinhardt",
-      "type": "Tank"
+      id: "reinhardt",
+      name: "Reinhardt",
+      type: "Tank",
+      img: "/images/changeme.jpg"
     }
   ,
-  "roadhog": 
+  roadhog: 
     {
-      "name": "Roadhog",
-      "type": "Tank"
+      id: "roadhog",
+      name: "Roadhog",
+      type: "Tank",
+      img: "/images/changeme.jpg"
     }
   ,
-  "soldier-76": 
+  soldier76: 
     {
-      "name": "Soldier: 76",
-      "type": "Offense"
+      id: "soldier76",
+      name: "Soldier: 76",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "sombra": 
+  sombra: 
     {
-      "name": "Sombra",
-      "type": "Offense"
+      id: "sombra",
+      name: "Sombra",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "symmetra": 
+  symmetra: 
     {
-      "name": "Symmetra",
-      "type": "Support"
+      id: "symmetra",
+      name: "Symmetra",
+      type: "Support",
+      img: "/images/changeme.jpg"
     }
   ,
-  "torbjorn": 
+  torbjorn: 
     {
-      "name": "Torbjorn",
-      "type": "Defense"
+      id: "torbjorn",
+      name: "Törbjorn",
+      type: "Defense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "tracer": 
+  tracer: 
     {
-      "name": "Tracer",
-      "type": "Offense"
+      id: "tracer",
+      name: "Tracer",
+      type: "Offense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "widowmaker": 
+  widowmaker: 
     {
-      "name": "Widowmaker",
-      "type": "Defense"
+      id: "widowmaker",
+      name: "Widowmaker",
+      type: "Defense",
+      img: "/images/changeme.jpg"
     }
   ,
-  "winston": 
+  winston: 
     {
-      "name": "Winston",
-      "type": "Tank"
+      id: "winston",
+      name: "Winston",
+      type: "Tank",
+      img: "/images/changeme.jpg"
     }
   ,
-  "zarya": 
+  zarya: 
     {
-      "name": "Zarya",
-      "type": "Tank"
+      id: "zarya",
+      name: "Zarya",
+      type: "Tank",
+      img: "/images/changeme.jpg"
     }
   ,
-  "zenyatta": 
+  zenyatta: 
     {
-      "name": "Zenyatta",
-      "type": "Support"
+      id: "zenyatta",
+      name: "Zenyatta",
+      type: "Support",
+      img: "/images/changeme.jpg"
     }
-  
 };
+
+export const none = {
+  id: "none",
+  name: "none",
+  type: "none",
+  img: "/images/default.jpg"
+}
 
 export default heroes;

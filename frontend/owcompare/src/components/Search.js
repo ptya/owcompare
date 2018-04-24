@@ -1,28 +1,22 @@
-import React, { Component, Fragment } from 'react';
-
-const Hero = (props) => (
-  <li>{props.hero.name}</li>
-);
+import React, { Component } from 'react';
 
 class Search extends Component {
-  heroList = hero => (
-    <li key={hero} >{this.props.heroes[hero].name}</li>
+  heroList = (hero, i) => (
+    <li key={i} ref={i} id={hero}>{this.props.availableHeroes[hero].name}</li>
   )
 
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.props.search === '') return
-
-    console.log(this);
-
-    // TODO: handle refs and update selected hero with input (or 1st value)
+    const firstId = this.refs[0].id;
+    this.props.updateSelected(firstId);
   }
 
   render() {
-    let filteredHeroes = Object.keys(this.props.heroes).filter(
+    let filteredHeroes = Object.keys(this.props.availableHeroes).filter(
       (hero) => {
         if (this.props.search === '') return '';
-        return this.props.heroes[hero].name.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
+        return this.props.availableHeroes[hero].name.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
       }
     );
 
