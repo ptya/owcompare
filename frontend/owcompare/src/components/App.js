@@ -26,6 +26,7 @@ class App extends Component {
       );
       (filteredHeroes.length > 0) ? this.setState({ search: nextSearch }) : this.setState({ search: prevSearch });
     }
+    // TODO: search input go back to earliest result after adding a hero so it's not stuck
   }
 
   updateSelected = key => {
