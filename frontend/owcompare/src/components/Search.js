@@ -7,13 +7,16 @@ class Search extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.props.search === '') return
-    const firstId = this.refs[0].id;
-    this.props.updateSelected(firstId);
+    if (0 in this.refs && this.props.search !== '') {
+      const firstId = this.refs[0].id;
+      this.props.updateSelected(firstId);
+    } else {
+      return
+    }
   }
 
   render() {
-    let filteredHeroes = Object.keys(this.props.availableHeroes).filter(
+    const filteredHeroes = Object.keys(this.props.availableHeroes).sort().filter(
       (hero) => {
         if (this.props.search === '') return '';
         return this.props.availableHeroes[hero].name.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;

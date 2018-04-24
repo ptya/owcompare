@@ -3,27 +3,29 @@ import React, { Component } from 'react';
 class Selection extends Component {
   heroList = (hero, i) => {
     const selectedHero = this.props.selectedHeroes[hero];
-    console.log(hero);
-    console.log(selectedHero);
-    console.log(selectedHero['name']);
-    return <li key={hero}>{selectedHero['name']}</li>
+    return (
+      <li key={hero}>
+        <span>
+          {selectedHero['name']}
+        </span>
+        <button onClick={() => this.props.removeSelected(hero) }>&times;</button>
+      </li>
+    )
   }
 
-  /*heroList = () => {
-    let selected = [];
-    for (let i = 0; i < this.props.requiredHeroes; i++) {
-      if this.props.selectedHeroes[i]
-    }
-  }*/
-  
-
   render() {
-    //let translatedHeroes = this.props.selectedHeroes.map(
-    //  this.heroList
-    //)
+    const heroCount = Object.keys(this.props.selectedHeroes).length;
+    const defaultHero = [];
+    for (let i = 0; i < (6 - heroCount); i++) {
+      defaultHero.push(
+        (<li key={i}>Nyema</li>)
+      )
+    }
+
     return (
       <ul>
         {Object.keys(this.props.selectedHeroes).map(this.heroList)}
+        {defaultHero}
       </ul>
     );
   }

@@ -9,46 +9,68 @@ class App extends Component {
   state = {
     availableHeroes: heroes,
     search: '',
-    selectedHeroes,
-    nextSlot: 1
+    selectedHeroes: {},
+    slots: 6
   };
 
   updateSearch = e => {
-    this.setState({ search: e.target.value })
+    const prevSearch = this.state.search;
+    const nextSearch = e.target.value;
+    if (nextSearch === '') {
+      this.setState({ search: nextSearch });
+    } else {
+      const filteredHeroes = Object.keys(this.state.availableHeroes).filter(
+        (hero) => {
+          return this.state.availableHeroes[hero].name.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1;
+        }
+      );
+      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch }) : this.setState({ search: prevSearch });
+    }
   }
-  
-  updateSelected = id => {
-    let nextSlot = this.state.nextSlot;
-    if (nextSlot <= 6) {
-      const hero = heroes[id];
-      console.log('i am update');
-      console.log(id);
-      console.log(hero);
-      const toUpdate = `hero${nextSlot}`;
-      const selectedHeroes = this.state.selectedHeroes;
-      let heroToUpdate = selectedHeroes[toUpdate];
-      console.log('to update:');
-      console.log(heroToUpdate);
-      selectedHeroes[toUpdate] = { ...hero };
-      nextSlot++;
-      this.setState({ nextSlot });
-      this.setState({ selectedHeroes });
+
+  updateSelected = key => {
+    const selectedHeroes = this.state.selectedHeroes;
+    if (Object.keys(selectedHeroes).length < this.state.slots) {
       const availableHeroes = this.state.availableHeroes;
-      delete availableHeroes[id];
+      const hero = availableHeroes[key];
+      selectedHeroes[key] = { ...hero };
+      this.setState({ selectedHeroes });
+
+      delete availableHeroes[key];
       this.setState({ availableHeroes });
     } else {
       return
     }
   }
 
+  removeSelected = key => {
+    const selectedHeroes = this.state.selectedHeroes;
+    const availableHeroes = this.state.availableHeroes;
+    const hero = selectedHeroes[key];
+
+    delete selectedHeroes[key];
+    this.setState({ selectedHeroes });
+
+    availableHeroes[key] = { ...hero };
+    this.setState({ availableHeroes });
+  }
+
   render() {
-    const availableSpace = this.state.nextSlot <= 6;
-    
+    const availableSpace = Object.keys(this.state.selectedHeroes).length < this.state.slots;
+
     return (
       <Fragment>
-        <Selection selectedHeroes={this.state.selectedHeroes} />
+        <Selection
+          selectedHeroes={this.state.selectedHeroes}
+          removeSelected={this.removeSelected}
+        />
         { availableSpace &&
-          <Search availableHeroes={this.state.availableHeroes} search={this.state.search} updateSearch={this.updateSearch} updateSelected={this.updateSelected} />
+          <Search
+            availableHeroes={this.state.availableHeroes}
+            search={this.state.search}
+            updateSearch={this.updateSearch}
+            updateSelected={this.updateSelected}
+          />
         }
       </Fragment>
     );
