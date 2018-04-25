@@ -39,6 +39,9 @@ class App extends Component {
 
       delete availableHeroes[key];
       this.setState({ availableHeroes });
+
+      this.setState({ search: '' });
+
     } else {
       return
     }
