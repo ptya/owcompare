@@ -4,10 +4,12 @@ import selectedHeroes from '../data/selectedHeroes';
 
 import Search from './Search';
 import Selection from './Selection';
+import Recommend from './Recommend';
 
 class App extends Component {
   state = {
     availableHeroes: heroes,
+    recommendedHeroes: {},
     search: '',
     selectedHeroes: {},
     slots: 6
@@ -76,6 +78,7 @@ class App extends Component {
             updateSelected={this.updateSelected}
           />
         }
+        <Recommend />
       </Fragment>
     );
   }

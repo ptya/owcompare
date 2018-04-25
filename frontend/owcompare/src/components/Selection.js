@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 
 class Selection extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    const updatedHeroList = this.props.selectedHeroes !== nextProps.selectedHeroes;
+    console.log(updatedHeroList);
+    console.log(Object.keys(this.props.selectedHeroes).length);
+    console.log(Object.keys(nextProps.selectedHeroes).length);
+    console.table(this.props.selectedHeroes);
+    console.table(nextProps.selectedHeroes);
+    console.table(nextProps);
+    console.table(this.props);
+    console.log('---');
+    console.log(nextState);
+    return updatedHeroList;
+  }
+
+  componentDidUpdate() {
+    console.log('helloo');
+  }
+
   heroList = (hero, i) => {
     const selectedHero = this.props.selectedHeroes[hero];
     return (
