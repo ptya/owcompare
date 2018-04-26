@@ -6,10 +6,6 @@ class Selection extends Component {
     return updatedHeroList;
   }
 
-  componentDidUpdate() {
-    console.log('helloo');
-  }
-
   heroList = (hero, i) => {
     const selectedHero = this.props.selectedHeroes[hero];
     return (
