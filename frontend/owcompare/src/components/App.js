@@ -16,7 +16,7 @@ class App extends Component {
   };
 
   updateSearch = e => {
-    const prevSearch = this.state.search;
+    const prevSearch = { ...this.state.search };
     const nextSearch = e.target.value;
     if (nextSearch === '') {
       this.setState({ search: nextSearch });
@@ -26,15 +26,15 @@ class App extends Component {
           return this.state.availableHeroes[hero].name.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1;
         }
       );
-      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch }) : this.setState({ search: prevSearch });
+      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch }) : this.setState({ prevSearch });
     }
     // TODO: search input go back to earliest result after adding a hero so it's not stuck
   }
 
   updateSelected = key => {
-    const selectedHeroes = this.state.selectedHeroes;
+    const selectedHeroes = { ...this.state.selectedHeroes };
     if (Object.keys(selectedHeroes).length < this.state.slots) {
-      const availableHeroes = this.state.availableHeroes;
+      const availableHeroes = { ...this.state.availableHeroes };
       const hero = availableHeroes[key];
       selectedHeroes[key] = { ...hero };
       this.setState({ selectedHeroes });
@@ -50,8 +50,8 @@ class App extends Component {
   }
 
   removeSelected = key => {
-    const selectedHeroes = this.state.selectedHeroes;
-    const availableHeroes = this.state.availableHeroes;
+    const selectedHeroes = { ...this.state.selectedHeroes };
+    const availableHeroes = { ...this.state.availableHeroes };
     const hero = selectedHeroes[key];
 
     delete selectedHeroes[key];
