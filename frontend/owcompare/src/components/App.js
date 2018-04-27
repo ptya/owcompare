@@ -85,7 +85,7 @@ class App extends Component {
             updateSelected={this.updateSelected}
           />
         }
-        <Recommend selectedHeroes={this.state.selectedHeroes} />
+        <Recommend selectedHeroes={this.state.selectedHeroes} points={this.state.points} />
       </Fragment>
     );
   }
