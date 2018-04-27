@@ -6,14 +6,21 @@ import Search from './Search';
 import Selection from './Selection';
 import Recommend from './Recommend';
 
+import { getRandomPoints } from '../helper';
+
 class App extends Component {
   state = {
     availableHeroes: heroes,
     recommendedHeroes: {},
     search: '',
     selectedHeroes: {},
-    slots: 6
+    slots: 6,
+    points: getRandomPoints(),
   };
+
+  //componentDidMount() {
+  //  getRandomPoints();
+  //}
 
   updateSearch = e => {
     const prevSearch = { ...this.state.search };
@@ -78,7 +85,7 @@ class App extends Component {
             updateSelected={this.updateSelected}
           />
         }
-        <Recommend />
+        <Recommend selectedHeroes={this.state.selectedHeroes} />
       </Fragment>
     );
   }
