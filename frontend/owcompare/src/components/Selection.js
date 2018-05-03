@@ -12,6 +12,7 @@ class Selection extends Component {
       <li key={hero}>
         <span>
           {selectedHero['name']}
+          <img src={selectedHero['img']} alt={selectedHero['name']} /> 
         </span>
         <button onClick={() => this.props.removeSelected(hero) }>&times;</button>
       </li>

@@ -4,7 +4,7 @@ const heroes = {
       id: "ana",
       name: "Ana",
       type: "Support",
-      img: "/images/changeme.jpg"
+      img: "images/ana-portrait.png"
     }
   ,    	
   bastion: 
@@ -12,7 +12,7 @@ const heroes = {
       id: "bastion",
       name: "Bastion",
       type: "Defense",
-      img: "/images/changeme.jpg"
+      img: "images/bastion-portrait.png"
     }
   ,
   brigitte: 
@@ -20,7 +20,7 @@ const heroes = {
       id: "brigitte",
       name: "Brigitte",
       type: "Support",
-      img: "/images/changeme.jpg"
+      img: "images/brigitte-portrait.png"
     }
   ,
   dva: 
@@ -28,7 +28,7 @@ const heroes = {
       id: "dva",
       name: "D.Va",
       type: "Tank",
-      img: "/images/changeme.jpg"
+      img: "images/dva-portrait.png"
     }
   , 
   doomfist: 
@@ -36,7 +36,7 @@ const heroes = {
       id: "doomfist",
       name: "Doomfist",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/doomfist-portrait.png"
     }
   ,
   genji: 
@@ -44,7 +44,7 @@ const heroes = {
       id: "genji",
       name: "Genji",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/genji-portrait.png"
     }
   ,
   hanzo: 
@@ -52,7 +52,7 @@ const heroes = {
       id: "hanzo",
       name: "Hanzo",
       type: "Defense",
-      img: "/images/changeme.jpg"
+      img: "images/hanzo-portrait.png"
     }
   ,
   junkrat: 
@@ -60,7 +60,7 @@ const heroes = {
       id: "junkrat",
       name: "Junkrat",
       type: "Defense",
-      img: "/images/changeme.jpg"
+      img: "images/junkrat-portrait.png"
     }
   ,
   lucio: 
@@ -68,7 +68,7 @@ const heroes = {
       id: "lucio",
       name: "Lúcio",
       type: "Support",
-      img: "/images/changeme.jpg"
+      img: "images/lucio-portrait.png"
     }
   ,
   mccree: 
@@ -76,7 +76,7 @@ const heroes = {
       id: "mccree",
       name: "McCree",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/mccree-portrait.png"
     }
   ,
   mei: 
@@ -84,7 +84,7 @@ const heroes = {
       id: "mei",
       name: "Mei",
       type: "Defense",
-      img: "/images/changeme.jpg"
+      img: "images/mei-portrait.png"
     }
   ,
   mercy: 
@@ -92,7 +92,7 @@ const heroes = {
       id: "mercy",
       name: "Mercy",
       type: "Support",
-      img: "/images/changeme.jpg"
+      img: "images/mercy-portrait.png"
     }
   ,
   moira: 
@@ -100,7 +100,7 @@ const heroes = {
       id: "moira",
       name: "Moira",
       type: "Support",
-      img: "/images/changeme.jpg"
+      img: "images/moira-portrait.png"
     }
   ,
   orisa: 
@@ -108,7 +108,7 @@ const heroes = {
       id: "orisa",
       name: "Orisa",
       type: "Tank",
-      img: "/images/changeme.jpg"
+      img: "images/orisa-portrait.png"
     }
   ,
   pharah: 
@@ -116,7 +116,7 @@ const heroes = {
       id: "pharah",
       name: "Pharah",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/pharah-portrait.png"
     }
   ,
   reaper: 
@@ -124,7 +124,7 @@ const heroes = {
       id: "reaper",
       name: "Reaper",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/reaper-portrait.png"
     }
   ,
   reinhardt: 
@@ -132,7 +132,7 @@ const heroes = {
       id: "reinhardt",
       name: "Reinhardt",
       type: "Tank",
-      img: "/images/changeme.jpg"
+      img: "images/reinhardt-portrait.png"
     }
   ,
   roadhog: 
@@ -140,7 +140,7 @@ const heroes = {
       id: "roadhog",
       name: "Roadhog",
       type: "Tank",
-      img: "/images/changeme.jpg"
+      img: "images/roadhog-portrait.png"
     }
   ,
   soldier76: 
@@ -148,7 +148,7 @@ const heroes = {
       id: "soldier76",
       name: "Soldier: 76",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/soldier76-portrait.png"
     }
   ,
   sombra: 
@@ -156,7 +156,7 @@ const heroes = {
       id: "sombra",
       name: "Sombra",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/sombra-portrait.png"
     }
   ,
   symmetra: 
@@ -164,7 +164,7 @@ const heroes = {
       id: "symmetra",
       name: "Symmetra",
       type: "Support",
-      img: "/images/changeme.jpg"
+      img: "images/symmetra-portrait.png"
     }
   ,
   torbjorn: 
@@ -172,7 +172,7 @@ const heroes = {
       id: "torbjorn",
       name: "Törbjorn",
       type: "Defense",
-      img: "/images/changeme.jpg"
+      img: "images/torbjorn-portrait.png"
     }
   ,
   tracer: 
@@ -180,7 +180,7 @@ const heroes = {
       id: "tracer",
       name: "Tracer",
       type: "Offense",
-      img: "/images/changeme.jpg"
+      img: "images/tracer-portrait.png"
     }
   ,
   widowmaker: 
@@ -188,7 +188,7 @@ const heroes = {
       id: "widowmaker",
       name: "Widowmaker",
       type: "Defense",
-      img: "/images/changeme.jpg"
+      img: "images/widowmaker-portrait.png"
     }
   ,
   winston: 
@@ -196,7 +196,7 @@ const heroes = {
       id: "winston",
       name: "Winston",
       type: "Tank",
-      img: "/images/changeme.jpg"
+      img: "images/winston-portrait.png"
     }
   ,
   zarya: 
@@ -204,7 +204,7 @@ const heroes = {
       id: "zarya",
       name: "Zarya",
       type: "Tank",
-      img: "/images/changeme.jpg"
+      img: "images/zarya-portrait.png"
     }
   ,
   zenyatta: 
@@ -212,7 +212,7 @@ const heroes = {
       id: "zenyatta",
       name: "Zenyatta",
       type: "Support",
-      img: "/images/changeme.jpg"
+      img: "images/zenyatta-portrait.png"
     }
 };
 
@@ -220,7 +220,7 @@ export const none = {
   id: "none",
   name: "none",
   type: "none",
-  img: "/images/default.jpg"
+  img: "images/default.png"
 }
 
 export default heroes;
