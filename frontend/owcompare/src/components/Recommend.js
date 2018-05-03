@@ -1,34 +1,44 @@
 import React, { Component, Fragment } from 'react';
+import Hero from './Hero';
 
 class Recommend extends Component {
-  shouldComponentUpdate(nextProps) {
-    const updatedHeroList = this.props.selectedHeroes !== nextProps.selectedHeroes;
-    return updatedHeroList;
+  constructor(props) {
+    super(props);
+    this.state = {
+      position: 0,
+    };
   }
 
-  heroList = (hero) => {
-    return <li key={hero}>{hero}</li>
+  shouldComponentUpdate(nextProps, nextState) {
+    const updatedHeroList = this.props.recommendedHeroes !== nextProps.recommendedHeroes;
+    const updatedPosition = this.state.position !== nextState.position;
+    return updatedHeroList || updatedPosition;
+  }
+
+  nextHero = () => {
+    let newPosition = this.state.position;
+    newPosition = newPosition >= 5 ? 0 : newPosition + 1;
+    this.setState({ position: newPosition });
+  }
+
+  prevHero = () => {
+    let newPosition = this.state.position;
+    newPosition = newPosition <= 0 ? 5 : newPosition - 1;
+    this.setState({ position: newPosition });
   }
 
   render() {
-    const calculatedHeroes = {};
-    Object.entries(this.props.selectedHeroes).forEach(([key, val]) => {
-      const hero = this.props.points[key];
-      Object.entries(hero).forEach(([key,val]) => {
-        calculatedHeroes[key] = calculatedHeroes[key] + val || val;
-      });
-    })
-    const heroesSorted = Object.keys(calculatedHeroes).sort(function(a,b){ return calculatedHeroes[b]-calculatedHeroes[a]}).slice(0,7);
-
-    const heroToShow = heroesSorted.length > 0;
+    const heroToShow = this.props.recommendedHeroes.length > 0;
 
     return (
       <Fragment>
-      { heroToShow &&
-        <ul>
-          {heroesSorted.map(this.heroList)}
-        </ul>
-      }
+        { heroToShow &&
+          <Fragment>
+            <button onClick={ () => this.prevHero() }> ◄ </button>
+            <Hero position={this.state.position} recommendedHeroes={this.props.recommendedHeroes} />
+            <button onClick={ () => this.nextHero() }> ► </button>
+          </Fragment>
+        }
       </Fragment>
     );
   }

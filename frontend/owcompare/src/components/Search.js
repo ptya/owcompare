@@ -23,12 +23,16 @@ class Search extends Component {
       }
     );
 
+    const heroToShow = filteredHeroes.length > 0;
+
     return (
       <form onSubmit={this.handleSubmit} >
         <input type='text' ref='name' value={this.props.search} placeholder='Search for a hero..' onChange={this.props.updateSearch}/>
-        <ul>
-          {filteredHeroes.map(this.heroList)}
-        </ul>
+        { heroToShow &&
+          <ul>
+            {filteredHeroes.map(this.heroList)}
+          </ul>
+        }
       </form>
     );
   }
