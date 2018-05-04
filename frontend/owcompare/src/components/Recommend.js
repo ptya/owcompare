@@ -29,13 +29,14 @@ class Recommend extends Component {
 
   render() {
     const heroToShow = this.props.recommendedHeroes.length > 0;
+    const hero = this.props.allHeroes[this.props.recommendedHeroes[this.state.position]] || '';
 
     return (
       <Fragment>
         { heroToShow &&
           <Fragment>
             <button onClick={ () => this.prevHero() }> ◄ </button>
-            <Hero position={this.state.position} recommendedHeroes={this.props.recommendedHeroes} allHeroes={this.props.allHeroes} />
+            <Hero hero={hero} />
             <button onClick={ () => this.nextHero() }> ► </button>
           </Fragment>
         }

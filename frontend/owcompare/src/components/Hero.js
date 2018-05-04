@@ -1,10 +1,7 @@
 import React from 'react';
 
 const Hero = (props) => {
-  const heroId = props.recommendedHeroes[props.position];
-  const hero = props.allHeroes[heroId];
-  console.log(hero);
-  return <img src={hero['img']} alt={hero['name']} />
+  return <img src={props.hero['img']} alt={props.hero['name']} />
 }
 
 export default Hero;
