@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Hero from './Hero';
 
 class Selection extends Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -10,10 +11,7 @@ class Selection extends Component {
     const selectedHero = this.props.selectedHeroes[hero];
     return (
       <li key={hero}>
-        <span>
-          {selectedHero['name']}
-          <img src={selectedHero['img']} alt={selectedHero['name']} /> 
-        </span>
+        <Hero hero={selectedHero}/> 
         <button onClick={() => this.props.removeSelected(hero) }>&times;</button>
       </li>
     )
