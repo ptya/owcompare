@@ -18,18 +18,10 @@ class Selection extends Component {
   }
 
   render() {
-    const heroCount = Object.keys(this.props.selectedHeroes).length;
-    const defaultHero = [];
-    for (let i = 0; i < (6 - heroCount); i++) {
-      defaultHero.push(
-        (<li key={i}>Nyema</li>)
-      )
-    }
 
     return (
       <ul>
         {Object.keys(this.props.selectedHeroes).map(this.heroList)}
-        {defaultHero}
       </ul>
     );
   }
