@@ -91,44 +91,36 @@ a img {
 }
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+          box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
 }
 body main {
-  max-width: 600px;
-  margin: 10px auto;
+  max-width: 100vw;
+  position: relative;
 }
 body main .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: box;
   display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -o-box-lines: multiple;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  max-width: 600px;
-  min-height: 500px;
+      flex-wrap: wrap;
+  max-width: 100vw;
+  height: 33vh;
   background: #f00;
   -webkit-box-pack: start;
-  -o-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 body main .flex-item {
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
+  -ms-flex-preferred-size: 33.333333333333336vw;
+      flex-basis: 33.333333333333336vw;
   -webkit-box-flex: 0;
-  -o-box-flex: 0;
-  -ms-box-flex: 0;
-  box-flex: 0;
-  -ms-flex-positive: 0;
-      flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   position: relative;
   background: #ff0;
-  max-height: 250px;
+  height: 50%;
 }
 body main .flex-item .hero-img {
   height: 100%;
@@ -142,6 +134,7 @@ body main .close-btn {
 }
 body main .search-wrapper {
   position: relative;
+  z-index: 999;
 }
 body main .search-wrapper .search {
   position: absolute;
@@ -151,7 +144,7 @@ body main .search-wrapper .search {
 }
 body main .search-wrapper .search .search-bar {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   height: 35px;
   width: 350px;
   margin: auto;
@@ -160,16 +153,36 @@ body main .search-wrapper .search .search-bar {
 body main .search-wrapper .search .search-list {
   width: 335px;
   margin: auto;
-  background: #00f;
 }
 body main .search-wrapper .search .search-list li {
   padding: 0.4rem;
-  -webkit-transition: padding 0.1s;
-  transition: padding 0.1s;
-}
-body main .search-wrapper .search .search-list li:nth-child(even) {
-  background: #008000;
+  border: 1px solid rgba(255,129,0,0.169);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  background: rgba(255,254,254,0.902);
 }
 body main .search-wrapper .search .search-list li:hover {
-  padding: 0.8rem;
+  border: 1px solid rgba(255,129,0,0.4);
+  letter-spacing: 1px;
+}
+body main .recommend-wrapper {
+  height: 67vh;
+  position: relative;
+}
+body main .recommend-wrapper .btn {
+  position: absolute;
+}
+body main .recommend-wrapper .btn.btn-left {
+  left: 0;
+  top: 50%;
+}
+body main .recommend-wrapper .btn.btn-right {
+  right: 0;
+  top: 50%;
+}
+body main .recommend-wrapper .hero-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
