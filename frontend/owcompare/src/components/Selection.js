@@ -11,7 +11,7 @@ class Selection extends Component {
     const selectedHero = this.props.selectedHeroes[hero];
     return (
       <li key={hero} className='flex-item' >
-        <Hero hero={selectedHero}/>
+        <Hero hero={selectedHero} />
         <button className='close-btn' onClick={() => this.props.removeSelected(hero) }>&times;</button>
       </li>
     )

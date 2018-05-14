@@ -2,11 +2,8 @@ import React, { Component, Fragment } from 'react';
 import Hero from './Hero';
 
 class Recommend extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      position: 0,
-    };
+  state = {
+    position: 0
   }
 
   shouldComponentUpdate(nextProps, nextState) {
