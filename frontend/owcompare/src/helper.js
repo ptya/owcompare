@@ -8,6 +8,5 @@ export const getRandomPoints = () => {
       points[key][k] = num;
     });
   });
-  console.log(points);
   return points;
 };
