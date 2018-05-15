@@ -7,7 +7,7 @@ import Recommend from './Recommend';
 
 import { getRandomPoints } from '../helper';
 
-class Compare extends React.Component {
+class Compare extends Component {
   state = {
     allHeroes: heroes,
     availableHeroes: heroes,
@@ -89,8 +89,7 @@ class Compare extends React.Component {
       search,
       selectedHeroes,
       slots } = this.state;
-    const { state,
-      updateSearch,
+    const { updateSearch,
       updateSelected,
       removeSelected } = this;
 
