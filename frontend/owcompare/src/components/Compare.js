@@ -4,7 +4,6 @@ import heroes from '../data/heroes';
 import Search from './Search';
 import Selection from './Selection';
 import Recommend from './Recommend';
-import Hero from './Hero';
 
 import { getRandomPoints } from '../helper';
 
@@ -82,14 +81,14 @@ class Compare extends React.Component {
   static Search = Search;
   static Selection = Selection;
   static Recommend = Recommend;
-  static Hero = Hero;
 
   render() {
     const { allHeroes,
       availableHeroes,
       recommendedHeroes,
       search,
-      selectedHeroes } = this.state;
+      selectedHeroes,
+      slots } = this.state;
     const { state,
       updateSearch,
       updateSelected,
@@ -103,6 +102,7 @@ class Compare extends React.Component {
             recommendedHeroes,
             search,
             selectedHeroes,
+            slots,
             updateSearch,
             updateSelected,
             removeSelected

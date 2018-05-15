@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class Search extends Component {
   heroList = (hero, i) => (
@@ -24,18 +24,23 @@ class Search extends Component {
     );
 
     const heroToShow = filteredHeroes.length > 0;
+    const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
     return (
-      <div className='search-wrapper' >
-        <form className='search' onSubmit={this.handleSubmit} >
-          <input className='search-bar' type='text' ref='name' value={this.props.search} placeholder='Search for a hero..' onChange={this.props.updateSearch}/>
-          { heroToShow &&
-            <ul className='search-list'>
-              {filteredHeroes.map(this.heroList)}
-            </ul>
-          }
-        </form>
-      </div>
+      <Fragment>
+        { availableSpace &&
+          <div className='search-wrapper' >
+            <form className='search' onSubmit={this.handleSubmit} >
+              <input className='search-bar' type='text' ref='name' value={this.props.search} placeholder='Search for a hero..' onChange={this.props.updateSearch}/>
+              { heroToShow &&
+                <ul className='search-list'>
+                  {filteredHeroes.map(this.heroList)}
+                </ul>
+              }
+            </form>
+          </div>
+        }
+      </Fragment>
     );
   }
 }

@@ -14,6 +14,7 @@ class App extends Component {
         recommendedHeroes,
         search,
         selectedHeroes,
+        slots,
         updateSearch,
         updateSelected,
         removeSelected) => (
@@ -21,10 +22,13 @@ class App extends Component {
             <Compare.Selection
               selectedHeroes={selectedHeroes}
               removeSelected={removeSelected}
-            />
+              slots={slots}
+              />
             <Compare.Search
               availableHeroes={availableHeroes}
               search={search}
+              selectedHeroes={selectedHeroes}
+              slots={slots}
               updateSelected={updateSelected}
               updateSearch={updateSearch}
             />
