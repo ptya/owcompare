@@ -1,18 +1,42 @@
 import React, { Component, Fragment } from 'react';
 
 class Search extends Component {
+  state = {
+    toHide: true,
+  }
+
   heroList = (hero, i) => (
-    <li className='search-list-item' key={i} ref={i} id={hero}>{this.props.availableHeroes[hero].name}</li>
+    <li
+      className='search-list-item'
+      key={i}
+      ref={i}
+      id={hero}
+      onMouseDown={this.handleClick.bind(this, hero)}
+    >
+      {this.props.availableHeroes[hero].name}
+    </li>
   )
 
   handleSubmit = (e) => {
     e.preventDefault();
     if (0 in this.refs && this.props.search !== '') {
-      const firstId = this.refs[0].id;
-      this.props.updateSelected(firstId);
+      const firstHeroId = this.refs[0].id;
+      this.props.updateSelected(firstHeroId);
     } else {
       return
     }
+  }
+
+  handleClick = (heroId) => {
+    this.props.updateSelected(heroId)
+  }
+
+  handleFocus = () => {
+    this.setState({ toHide: false });
+  }
+
+  handleBlur = () => {
+    this.setState({ toHide: true });
   }
 
   render() {
@@ -26,14 +50,27 @@ class Search extends Component {
     const heroToShow = filteredHeroes.length > 0;
     const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
+    let searchListClass = ['search-list'];
+    if(this.state.toHide) {
+      searchListClass.push('hidden');
+    }
+
     return (
       <Fragment>
         { availableSpace &&
-          <div className='search-wrapper' >
-            <form className='search' onSubmit={this.handleSubmit} >
-              <input className='search-bar' type='text' ref='name' value={this.props.search} placeholder='Search for a hero..' onChange={this.props.updateSearch}/>
+          <div className='search-wrapper' onBlur={this.handleBlur}>
+            <form id='search' className='search' onSubmit={this.handleSubmit} >
+              <input
+                className='search-bar'
+                type='text' ref='name'
+                value={this.props.search}
+                placeholder='Search for a hero..'
+                onChange={this.props.updateSearch}
+                onFocus={this.handleFocus}
+
+              />
               { heroToShow &&
-                <ul className='search-list'>
+                <ul className={ searchListClass.join(' ') }>
                   {filteredHeroes.map(this.heroList)}
                 </ul>
               }

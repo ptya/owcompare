@@ -154,6 +154,9 @@ body main .search-wrapper .search .search-list {
   width: 335px;
   margin: auto;
 }
+body main .search-wrapper .search .search-list.hidden {
+  display: none;
+}
 body main .search-wrapper .search .search-list li {
   padding: 0.4rem;
   border: 1px solid rgba(255,129,0,0.169);
