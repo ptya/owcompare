@@ -43,40 +43,36 @@ body
 
     .search-wrapper
       position relative
-      z-index: 999
+      z-index 999
       .search
         position absolute
         width 100%
         text-align center
-        // display flex
-        // flex-direction column
         top -(search-bar-height/2)px
 
         .search-bar
           box-sizing border-box
-          //position absolute
           height search-bar-height
-          //top -(@height/2)px
           width search-width
-          //left centered(@width)
           margin auto
-          text-align center
+          padding-left 25px
 
         .search-list
           width search-width - 15px
           margin auto
-          // background blue
           &.hidden
-            display: none
+            display none
 
-          li
+          .search-list-item
             padding 0.4rem
             border 1px solid rgba(#ff81002b)
             transition all 0.1s
-            background rgba(#fffefee6)
+            background rgba(255,254,254,0.9)
             &:hover
               border 1px solid rgba(#ff810066)
               letter-spacing 1px
+            &.active
+              background rgba(243, 241, 212, 0.9)
 
     .recommend-wrapper
       height round(maxheight/3*2)

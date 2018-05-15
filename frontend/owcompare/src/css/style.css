@@ -148,7 +148,7 @@ body main .search-wrapper .search .search-bar {
   height: 35px;
   width: 350px;
   margin: auto;
-  text-align: center;
+  padding-left: 25px;
 }
 body main .search-wrapper .search .search-list {
   width: 335px;
@@ -157,16 +157,19 @@ body main .search-wrapper .search .search-list {
 body main .search-wrapper .search .search-list.hidden {
   display: none;
 }
-body main .search-wrapper .search .search-list li {
+body main .search-wrapper .search .search-list .search-list-item {
   padding: 0.4rem;
   border: 1px solid rgba(255,129,0,0.169);
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
-  background: rgba(255,254,254,0.902);
+  background: rgba(255,254,254,0.9);
 }
-body main .search-wrapper .search .search-list li:hover {
+body main .search-wrapper .search .search-list .search-list-item:hover {
   border: 1px solid rgba(255,129,0,0.4);
   letter-spacing: 1px;
+}
+body main .search-wrapper .search .search-list .search-list-item.active {
+  background: rgba(243,241,212,0.9);
 }
 body main .recommend-wrapper {
   height: 67vh;

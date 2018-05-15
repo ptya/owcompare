@@ -20,7 +20,7 @@ class Compare extends Component {
 
   updateSearch = e => {
     const prevSearch = { ...this.state.search };
-    const nextSearch = capitalize(e.target.value);
+    const nextSearch = e.target.value;
     if (nextSearch === '') {
       this.setState({ search: nextSearch });
     } else {
