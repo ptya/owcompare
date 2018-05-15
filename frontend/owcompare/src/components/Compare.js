@@ -5,7 +5,7 @@ import Search from './Search';
 import Selection from './Selection';
 import Recommend from './Recommend';
 
-import { getRandomPoints } from '../helper';
+import { getRandomPoints, capitalize } from '../helper';
 
 class Compare extends Component {
   state = {
@@ -20,7 +20,7 @@ class Compare extends Component {
 
   updateSearch = e => {
     const prevSearch = { ...this.state.search };
-    const nextSearch = e.target.value;
+    const nextSearch = capitalize(e.target.value);
     if (nextSearch === '') {
       this.setState({ search: nextSearch });
     } else {
