@@ -119,7 +119,6 @@ class Search extends Component {
     }
     // TODO: limit the list result to 10 and scroll for the rest
     // TODO: search should work with ids as well as names
-    // TODO: if none selected, remove recommended
 
     return (
       <Fragment>

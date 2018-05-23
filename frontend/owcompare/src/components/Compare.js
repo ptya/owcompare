@@ -33,6 +33,21 @@ class Compare extends Component {
     }
   }
 
+  updateRecommendation = () => {
+    //TODO: make this async
+    const { selectedHeroes, points } = this.state;
+    console.log(selectedHeroes);
+    const calculatedHeroes = {};
+    Object.entries(selectedHeroes).forEach(([key, val]) => {
+      const hero = points[key];
+      Object.entries(hero).forEach(([key,val]) => {
+        calculatedHeroes[key] = calculatedHeroes[key] + val || val;
+      });
+    })
+    const heroesSorted = Object.keys(calculatedHeroes).sort(function(a,b){ return calculatedHeroes[b]-calculatedHeroes[a]}).slice(0,6) || [];
+    this.setState({ recommendedHeroes: heroesSorted });
+  }
+
   updateSelected = key => {
     const selectedHeroes = { ...this.state.selectedHeroes };
     if (Object.keys(selectedHeroes).length < this.state.slots) {
@@ -50,15 +65,17 @@ class Compare extends Component {
       this.setState({ search: '' });
 
       // update recommendedHeroes list
-      const calculatedHeroes = {};
-      Object.entries(selectedHeroes).forEach(([key, val]) => {
-        const hero = this.state.points[key];
-        Object.entries(hero).forEach(([key,val]) => {
-          calculatedHeroes[key] = calculatedHeroes[key] + val || val;
-        });
-      })
-      const heroesSorted = Object.keys(calculatedHeroes).sort(function(a,b){ return calculatedHeroes[b]-calculatedHeroes[a]}).slice(0,6);
-      this.setState({ recommendedHeroes: heroesSorted });
+      //TODO: Make this async
+      this.updateRecommendation();
+      // const calculatedHeroes = {};
+      // Object.entries(selectedHeroes).forEach(([key, val]) => {
+      //   const hero = this.state.points[key];
+      //   Object.entries(hero).forEach(([key,val]) => {
+      //     calculatedHeroes[key] = calculatedHeroes[key] + val || val;
+      //   });
+      // })
+      // const heroesSorted = Object.keys(calculatedHeroes).sort(function(a,b){ return calculatedHeroes[b]-calculatedHeroes[a]}).slice(0,6);
+      // this.setState({ recommendedHeroes: heroesSorted });
 
     } else {
       return
@@ -69,9 +86,13 @@ class Compare extends Component {
     const selectedHeroes = { ...this.state.selectedHeroes };
     const availableHeroes = { ...this.state.availableHeroes };
     const hero = selectedHeroes[key];
-
     delete selectedHeroes[key];
     this.setState({ selectedHeroes });
+
+    // empty recommendations if all heroes are removed
+    if (Object.keys(selectedHeroes).length === 0) {
+      this.setState({ recommendedHeroes: [] });
+    }
 
     availableHeroes[key] = { ...hero };
     this.setState({ availableHeroes });
