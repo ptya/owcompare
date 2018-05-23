@@ -117,7 +117,6 @@ class Search extends Component {
     if(toHide) {
       searchListClass.push('hidden');
     }
-    // TODO: active list item should have a small text saying hit enter to select
     // TODO: limit the list result to 10 and scroll for the rest
     // TODO: search should work with ids as well as names
     // TODO: if none selected, remove recommended
