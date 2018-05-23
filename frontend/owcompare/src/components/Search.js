@@ -93,8 +93,23 @@ class Search extends Component {
     this.setState( { cursor: i });
   }
 
+  handleKeyDown = (e) => {
+    if (e.keyCode === 38) { // Arrow up
+      e.preventDefault();
+      const len = this.props.search.length * 2 // Opera sometimes sees a carriage return as 2 characters
+      this.searchRef.current.setSelectionRange(len, len);
+    }
+    const {cursor, filteredHeroes} = this.state;
+    const listLength = filteredHeroes.length;
+    if (e.keyCode === 40 && cursor < listLength - 1 ) { // Arrow down
+      this.setState({ cursor: cursor + 1 });
+    } else if (e.keyCode === 38 && cursor > 0) { // Arrow up
+      this.setState({ cursor: cursor - 1 });
+    }
+  }
+
   render() {
-    const {filteredHeroes, toHide} = this.state
+    const {filteredHeroes, toHide} = this.state;
     const heroToShow = filteredHeroes.length > 0;
     const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
@@ -105,7 +120,6 @@ class Search extends Component {
     // TODO: active list item should have a small text saying hit enter to select
     // TODO: limit the list result to 10 and scroll for the rest
     // TODO: search should work with ids as well as names
-    // TODO: navigate with arrow keys
     // TODO: if none selected, remove recommended
 
     return (
@@ -122,6 +136,7 @@ class Search extends Component {
                 onChange={this.props.updateSearch}
                 onFocus={this.handleFocus}
                 onBlur={this.handleBlur}
+                onKeyDown={this.handleKeyDown}
                 autoFocus={true}
               />
               { heroToShow &&
