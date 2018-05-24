@@ -5,7 +5,7 @@ import Search from './Search';
 import Selection from './Selection';
 import Recommend from './Recommend';
 
-import { getRandomPoints, capitalize } from '../helper';
+import { getRandomPoints } from '../helper';
 
 class Compare extends Component {
   state = {
@@ -25,10 +25,13 @@ class Compare extends Component {
     } else {
       const filteredHeroes = Object.keys(this.state.availableHeroes).filter(
         (hero) => {
-          return this.state.availableHeroes[hero].name.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1;
+          return this.state.availableHeroes[hero].name
+            .toLowerCase()
+            .indexOf(nextSearch.toLowerCase()) !== -1;
         }
       );
-      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch }) : this.setState({ prevSearch });
+      (filteredHeroes.length > 0) ?
+        this.setState({ search: nextSearch }) : this.setState({ prevSearch });
     }
   }
 

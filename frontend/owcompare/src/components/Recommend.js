@@ -14,9 +14,8 @@ class Recommend extends Component {
 
   updateRecommendation = () => {
     const { selectedHeroes, points } = this.props;
-    if (Object.keys(selectedHeroes).length = 0) return;
+    if (Object.keys(selectedHeroes).length === 0) return [];
 
-    console.log(selectedHeroes);
     const calculatedHeroes = {};
     Object.entries(selectedHeroes).forEach(([key, val]) => {
       const hero = points[key];
@@ -24,7 +23,11 @@ class Recommend extends Component {
         calculatedHeroes[key] = calculatedHeroes[key] + val || val;
       });
     })
-    const heroesSorted = Object.keys(calculatedHeroes).sort(function(a,b){ return calculatedHeroes[b]-calculatedHeroes[a]}).slice(0,6) || [];
+    const heroesSorted = Object.keys(calculatedHeroes)
+                          .sort(function(a,b){
+                            return calculatedHeroes[b]-calculatedHeroes[a]
+                          })
+                          .slice(0,6) || [];
     return heroesSorted;
   }
 
