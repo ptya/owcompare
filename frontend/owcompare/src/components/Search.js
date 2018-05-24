@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 class Search extends Component {
   constructor(props) {
     super(props);
     this.searchRef = React.createRef();
+    this.activeRef = React.createRef();
   }
 
   state = {
@@ -30,7 +32,7 @@ class Search extends Component {
     };
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevProps.search !== this.props.search) {
       this.setState({ cursor: 0 })
     }
@@ -39,6 +41,16 @@ class Search extends Component {
     const {toHide} = this.state;
     if (this.searchRef.current && !toHide) {
       this.searchRef.current.focus();
+    }
+
+    // TODO: check item position instead to scroll up or down
+    const active = this.activeRef.current;
+    if (active) {
+      if (prevState.cursor > this.state.cursor) {
+        active.scrollIntoView(true);
+      } else if ( prevState.cursor < this.state.cursor) {
+        active.scrollIntoView(false);
+      }
     }
   }
 
@@ -52,7 +64,7 @@ class Search extends Component {
       <li
         className={ listItemClass.join(' ') }
         key={i}
-        ref={i}
+        ref={cursor === i ? this.activeRef : i}
         id={hero}
         onMouseDown={this.handleClick.bind(this, hero)}
         onMouseOver={this.handleHover.bind(this, i)}
@@ -117,14 +129,14 @@ class Search extends Component {
     if(toHide) {
       searchListClass.push('hidden');
     }
-    // TODO: limit the list result to 10 and scroll for the rest
+
     // TODO: search should work with ids as well as names
 
     return (
       <Fragment>
         { availableSpace &&
           <div className='search-wrapper' >
-            <form id='search' className='search' onSubmit={this.handleSubmit} >
+            <form id='search' className='search' onSubmit={this.handleSubmit}>
               <input
                 className='search-bar'
                 type='text'
@@ -138,9 +150,14 @@ class Search extends Component {
                 autoFocus={true}
               />
               { heroToShow &&
-                <ul className={ searchListClass.join(' ') }>
-                  {filteredHeroes.map(this.heroList)}
-                </ul>
+                <Scrollbars
+                  style={{ width: '335px', height: '15rem', margin: 'auto' }}
+                  universal
+                >
+                  <ul className={ searchListClass.join(' ') } >
+                    {filteredHeroes.map(this.heroList)}
+                  </ul>
+                </Scrollbars>
               }
             </form>
           </div>

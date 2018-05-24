@@ -153,6 +153,7 @@ body main .search-wrapper .search .search-bar {
 body main .search-wrapper .search .search-list {
   width: 335px;
   margin: auto;
+  border-bottom: 1px solid rgba(255,129,0,0.169);
 }
 body main .search-wrapper .search .search-list.hidden {
   display: none;
