@@ -4,14 +4,13 @@ import Compare from './Compare';
 
 class App extends Component {
   render() {
-    // const availableSpace = Object.keys(this.state.selectedHeroes).length < this.state.slots;
 
     return (
       <Compare>
       {
         (allHeroes,
         availableHeroes,
-        recommendedHeroes,
+        points,
         search,
         selectedHeroes,
         slots,
@@ -33,8 +32,9 @@ class App extends Component {
               updateSearch={updateSearch}
             />
             <Compare.Recommend
-              recommendedHeroes={recommendedHeroes}
+              selectedHeroes={selectedHeroes}
               allHeroes={allHeroes}
+              points={points}
             />
           </Fragment>
         )
