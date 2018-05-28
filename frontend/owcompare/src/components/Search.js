@@ -44,6 +44,7 @@ class Search extends Component {
     }
 
     // TODO: check item position instead to scroll up or down
+    // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
     const active = this.activeRef.current;
     if (active) {
       if (prevState.cursor > this.state.cursor) {
