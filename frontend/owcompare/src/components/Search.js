@@ -6,6 +6,7 @@ class Search extends Component {
     super(props);
     this.searchRef = React.createRef();
     this.activeRef = React.createRef();
+    this.resultsRef = React.createRef();
   }
 
   state = {
@@ -43,14 +44,20 @@ class Search extends Component {
       this.searchRef.current.focus();
     }
 
-    // TODO: check item position instead to scroll up or down
-    // https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
+    // Check if active item is visible and if not scroll accordingly
     const active = this.activeRef.current;
-    if (active) {
-      if (prevState.cursor > this.state.cursor) {
-        active.scrollIntoView(true);
-      } else if ( prevState.cursor < this.state.cursor) {
+    const results = this.resultsRef.current;
+    if (active && results.container) {
+      const activeBounding = active.getBoundingClientRect();
+      const resultsBounding = results.container.getBoundingClientRect();
+      if (
+        Math.floor(activeBounding.bottom) > Math.floor(resultsBounding.bottom)
+      ) {
         active.scrollIntoView(false);
+      } else if (
+        Math.ceil(activeBounding.top) < Math.ceil(resultsBounding.top)
+      ) {
+        active.scrollIntoView(true);
       }
     }
   }
@@ -126,12 +133,20 @@ class Search extends Component {
     const heroToShow = filteredHeroes.length > 0;
     const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
-    let searchListClass = ['search-list'];
-    if(toHide) {
-      searchListClass.push('hidden');
-    }
-
     // TODO: search should work with ids as well as names
+    // TODO: turn over to styled components and base all calculations on css values
+    const style = {
+      width: '335px',
+      height: '240px',
+      margin: 'auto',
+      borderBottom: '1px solid #ff81002b'
+    }
+    if (filteredHeroes.length < 8) {
+      style.height = filteredHeroes.length * 30;
+    }
+    if(toHide) {
+      style['display'] = 'none';
+    }
 
     return (
       <Fragment>
@@ -152,10 +167,11 @@ class Search extends Component {
               />
               { heroToShow &&
                 <Scrollbars
-                  style={{ width: '335px', height: '15rem', margin: 'auto' }}
+                  style={style}
                   universal
-                >
-                  <ul className={ searchListClass.join(' ') } >
+                  ref={ this.resultsRef }
+                  >
+                  <ul className='search-list' >
                     {filteredHeroes.map(this.heroList)}
                   </ul>
                 </Scrollbars>
