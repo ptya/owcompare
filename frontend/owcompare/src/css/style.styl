@@ -8,6 +8,13 @@ search-width = 350px
 centered(selfSize)
   maxwidth / 2 - selfSize / 2
 
+// * {
+//     outline: 1px solid red;
+// }
+
+html
+  margin 0
+  padding 0
 body
   box-sizing border-box
   width maxwidth
@@ -88,15 +95,27 @@ body
     .recommend-wrapper
       height round(maxheight/3*2)
       position relative
-      .btn
-        position absolute
-        &.btn-left
-          left 0
-          top 50%
-        &.btn-right
-          right 0
-          top 50%
-      .hero-img
+      .recommend-buttons
         height 100%
-        object-fit cover
         width 100%
+        position absolute
+        top 0
+        display flex
+      .btn
+        flex-grow 1
+        background none
+        border none
+        &.btn-left
+          text-align left
+          &:hover
+            font-size 2rem
+        &.btn-right
+          text-align right
+          &:hover
+            font-size 2rem
+      .hero-img
+        display block
+        object-fit cover
+        height 100%
+        width 100%
+

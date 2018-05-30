@@ -53,10 +53,12 @@ class Recommend extends Component {
     return (
       <Fragment>
         { heroToShow &&
-          <div className="recommend-wrapper">
-            <button className='btn btn-left' onClick={ () => this.prevHero() }> ◄ </button>
+          <div className='recommend-wrapper'>
             <Hero hero={hero} />
-            <button className='btn btn-right' onClick={ () => this.nextHero() }> ► </button>
+            <div className='recommend-buttons'>
+              <button className='btn btn-left' onClick={ () => this.prevHero() }> ◄ </button>
+              <button className='btn btn-right' onClick={ () => this.nextHero() }> ► </button>
+            </div>
           </div >
         }
       </Fragment>
