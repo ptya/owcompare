@@ -164,7 +164,7 @@ body main .search-wrapper .search .search-list.hidden {
 }
 body main .search-wrapper .search .search-list .search-list-item {
   position: relative;
-  padding: 6px;
+  padding: 6px 0;
   border: 1px solid rgba(255,129,0,0.169);
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
@@ -207,12 +207,14 @@ body main .recommend-wrapper .btn {
 }
 body main .recommend-wrapper .btn.btn-left {
   text-align: left;
+  margin-right: 20%;
 }
 body main .recommend-wrapper .btn.btn-left:hover {
   font-size: 2rem;
 }
 body main .recommend-wrapper .btn.btn-right {
   text-align: right;
+  margin-left: 20%;
 }
 body main .recommend-wrapper .btn.btn-right:hover {
   font-size: 2rem;
