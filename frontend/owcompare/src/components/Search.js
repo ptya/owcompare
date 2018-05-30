@@ -23,6 +23,9 @@ class Search extends Component {
         return availableHeroes[hero]
                 .name
                 .toLowerCase()
+                .indexOf(search.toLowerCase()) !== -1 || availableHeroes[hero]
+                .id
+                .toLowerCase()
                 .indexOf(search.toLowerCase()) !== -1;
       }
     );
@@ -133,7 +136,6 @@ class Search extends Component {
     const heroToShow = filteredHeroes.length > 0;
     const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
-    // TODO: search should work with ids as well as names
     // TODO: turn over to styled components and base all calculations on css values
     const style = {
       width: '335px',

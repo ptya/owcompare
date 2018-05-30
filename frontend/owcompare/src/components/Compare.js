@@ -25,7 +25,10 @@ class Compare extends Component {
     } else {
       const filteredHeroes = Object.keys(this.state.availableHeroes).filter(
         (hero) => {
-          return this.state.availableHeroes[hero].name
+          const current = this.state.availableHeroes[hero];
+          return current.name
+            .toLowerCase()
+            .indexOf(nextSearch.toLowerCase()) !== -1 || current.id
             .toLowerCase()
             .indexOf(nextSearch.toLowerCase()) !== -1;
         }
