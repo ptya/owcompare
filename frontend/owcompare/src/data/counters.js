@@ -25,8 +25,8 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
-  },    	
+    zenyatta: 0,
+  },
   bastion: {
     ana: 0,
     brigitte: 0,
@@ -53,7 +53,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   brigitte: {
     ana: 0,
@@ -81,7 +81,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   dva: {
     ana: 0,
@@ -109,8 +109,8 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
-  }, 
+    zenyatta: 0,
+  },
   doomfist: {
     ana: 0,
     bastion: 0,
@@ -137,7 +137,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   genji: {
     ana: 0,
@@ -165,7 +165,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   hanzo: {
     ana: 0,
@@ -193,7 +193,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   junkrat: {
     ana: 0,
@@ -221,7 +221,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   lucio: {
     ana: 0,
@@ -249,7 +249,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   mccree: {
     ana: 0,
@@ -277,7 +277,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   mei: {
     ana: 0,
@@ -305,7 +305,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   mercy: {
     ana: 0,
@@ -333,7 +333,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   moira: {
     ana: 0,
@@ -361,7 +361,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   orisa: {
     ana: 0,
@@ -389,7 +389,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   pharah: {
     ana: 0,
@@ -417,7 +417,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   reaper: {
     ana: 0,
@@ -445,7 +445,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   reinhardt: {
     ana: 0,
@@ -473,7 +473,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   roadhog: {
     ana: 0,
@@ -501,7 +501,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   soldier76: {
     ana: 0,
@@ -529,7 +529,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   sombra: {
     ana: 0,
@@ -557,7 +557,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   symmetra: {
     ana: 0,
@@ -585,7 +585,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   torbjorn: {
     ana: 0,
@@ -613,7 +613,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   tracer: {
     ana: 0,
@@ -641,7 +641,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   widowmaker: {
     ana: 0,
@@ -669,7 +669,7 @@ const counters = {
     tracer: 0,
     winston: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   winston: {
     ana: 0,
@@ -697,7 +697,7 @@ const counters = {
     tracer: 0,
     widowmaker: 0,
     zarya: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   zarya: {
     ana: 0,
@@ -725,7 +725,7 @@ const counters = {
     tracer: 0,
     widowmaker: 0,
     winston: 0,
-    zenyatta: 0
+    zenyatta: 0,
   },
   zenyatta: {
     ana: 0,
@@ -754,7 +754,7 @@ const counters = {
     widowmaker: 0,
     winston: 0,
     zarya: 0,
-  }
+  },
 };
 
 export default counters;

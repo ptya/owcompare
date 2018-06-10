@@ -1,2866 +1,2866 @@
 const points = {
-  "ana": [
+  ana: [
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
-  ],    	
-  "bastion": [
-    {
-      "name": "Ana",
-      "points": 0
+      name: 'Zenyatta',
+      points: 0,
     },
-    {
-      "name": "Brigitte",
-      "points": 0
-    },
-    {
-      "name": "D.Va",
-      "points": 0
-    },
-    {
-      "name": "Doomfist",
-      "points": 0
-    },
-    {
-      "name": "Genji",
-      "points": 0
-    },
-    {
-      "name": "Hanzo",
-      "points": 0
-    },
-    {
-      "name": "Junkrat",
-      "points": 0
-    },
-    {
-      "name": "Lúcio",
-      "points": 0
-    },
-    {
-      "name": "McCree",
-      "points": 0
-    },
-    {
-      "name": "Mei",
-      "points": 0
-    },
-    {
-      "name": "Mercy",
-      "points": 0
-    },
-    {
-      "name": "Moira",
-      "points": 0
-    },
-    {
-      "name": "Orisa",
-      "points": 0
-    },
-    {
-      "name": "Pharah",
-      "points": 0
-    },
-    {
-      "name": "Reaper",
-      "points": 0
-    },
-    {
-      "name": "Reinhardt",
-      "points": 0
-    },
-    {
-      "name": "Roadhog",
-      "points": 0
-    },
-    {
-      "name": "Soldier: 76",
-      "points": 0
-    },
-    {
-      "name": "Sombra",
-      "points": 0
-    },
-    {
-      "name": "Symmetra",
-      "points": 0
-    },
-    {
-      "name": "Torbjorn",
-      "points": 0
-    },
-    {
-      "name": "Tracer",
-      "points": 0
-    },
-    {
-      "name": "Widowmaker",
-      "points": 0
-    },
-    {
-      "name": "Winston",
-      "points": 0
-    },
-    {
-      "name": "Zarya",
-      "points": 0
-    },
-    {
-      "name": "Zenyatta",
-      "points": 0
-    }
   ],
-  "brigitte": [
+  bastion: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "dva": [
+  brigitte: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
-  ], 
-  "doomfist": [
-{
-      "name": "Ana",
-      "points": 0
+      name: 'Zenyatta',
+      points: 0,
     },
-    {
-      "name": "Bastion",
-      "points": 0
-    },
-    {
-      "name": "Brigitte",
-      "points": 0
-    },
-    {
-      "name": "D.Va",
-      "points": 0
-    },
-    {
-      "name": "Genji",
-      "points": 0
-    },
-    {
-      "name": "Hanzo",
-      "points": 0
-    },
-    {
-      "name": "Junkrat",
-      "points": 0
-    },
-    {
-      "name": "Lúcio",
-      "points": 0
-    },
-    {
-      "name": "McCree",
-      "points": 0
-    },
-    {
-      "name": "Mei",
-      "points": 0
-    },
-    {
-      "name": "Mercy",
-      "points": 0
-    },
-    {
-      "name": "Moira",
-      "points": 0
-    },
-    {
-      "name": "Orisa",
-      "points": 0
-    },
-    {
-      "name": "Pharah",
-      "points": 0
-    },
-    {
-      "name": "Reaper",
-      "points": 0
-    },
-    {
-      "name": "Reinhardt",
-      "points": 0
-    },
-    {
-      "name": "Roadhog",
-      "points": 0
-    },
-    {
-      "name": "Soldier: 76",
-      "points": 0
-    },
-    {
-      "name": "Sombra",
-      "points": 0
-    },
-    {
-      "name": "Symmetra",
-      "points": 0
-    },
-    {
-      "name": "Torbjorn",
-      "points": 0
-    },
-    {
-      "name": "Tracer",
-      "points": 0
-    },
-    {
-      "name": "Widowmaker",
-      "points": 0
-    },
-    {
-      "name": "Winston",
-      "points": 0
-    },
-    {
-      "name": "Zarya",
-      "points": 0
-    },
-    {
-      "name": "Zenyatta",
-      "points": 0
-    }
   ],
-  "genji": [
+  dva: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "hanzo": [
+  doomfist: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "junkrat": [
+  genji: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "lucio": [
+  hanzo: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "mccree": [
+  junkrat: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "mei": [
+  lucio: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "mercy": [
+  mccree: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "moira": [
+  mei: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "orisa": [
+  mercy: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "pharah": [
+  moira: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "reaper": [
+  orisa: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "reinhardt": [
+  pharah: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "roadhog": [
+  reaper: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "soldier-76": [
+  reinhardt: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "sombra": [
+  roadhog: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "symmetra": [
+  'soldier-76': [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "torbjorn": [
+  sombra: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "tracer": [
+  symmetra: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "widowmaker": [
+  torbjorn: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "winston": [
+  tracer: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "zarya": [
+  widowmaker: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Winston',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zenyatta",
-      "points": 0
-    }
+      name: 'Zenyatta',
+      points: 0,
+    },
   ],
-  "zenyatta": [
+  winston: [
     {
-      "name": "Ana",
-      "points": 0
+      name: 'Ana',
+      points: 0,
     },
     {
-      "name": "Bastion",
-      "points": 0
+      name: 'Bastion',
+      points: 0,
     },
     {
-      "name": "Brigitte",
-      "points": 0
+      name: 'Brigitte',
+      points: 0,
     },
     {
-      "name": "D.Va",
-      "points": 0
+      name: 'D.Va',
+      points: 0,
     },
     {
-      "name": "Doomfist",
-      "points": 0
+      name: 'Doomfist',
+      points: 0,
     },
     {
-      "name": "Genji",
-      "points": 0
+      name: 'Genji',
+      points: 0,
     },
     {
-      "name": "Hanzo",
-      "points": 0
+      name: 'Hanzo',
+      points: 0,
     },
     {
-      "name": "Junkrat",
-      "points": 0
+      name: 'Junkrat',
+      points: 0,
     },
     {
-      "name": "Lúcio",
-      "points": 0
+      name: 'Lúcio',
+      points: 0,
     },
     {
-      "name": "McCree",
-      "points": 0
+      name: 'McCree',
+      points: 0,
     },
     {
-      "name": "Mei",
-      "points": 0
+      name: 'Mei',
+      points: 0,
     },
     {
-      "name": "Mercy",
-      "points": 0
+      name: 'Mercy',
+      points: 0,
     },
     {
-      "name": "Moira",
-      "points": 0
+      name: 'Moira',
+      points: 0,
     },
     {
-      "name": "Orisa",
-      "points": 0
+      name: 'Orisa',
+      points: 0,
     },
     {
-      "name": "Pharah",
-      "points": 0
+      name: 'Pharah',
+      points: 0,
     },
     {
-      "name": "Reaper",
-      "points": 0
+      name: 'Reaper',
+      points: 0,
     },
     {
-      "name": "Reinhardt",
-      "points": 0
+      name: 'Reinhardt',
+      points: 0,
     },
     {
-      "name": "Roadhog",
-      "points": 0
+      name: 'Roadhog',
+      points: 0,
     },
     {
-      "name": "Soldier: 76",
-      "points": 0
+      name: 'Soldier: 76',
+      points: 0,
     },
     {
-      "name": "Sombra",
-      "points": 0
+      name: 'Sombra',
+      points: 0,
     },
     {
-      "name": "Symmetra",
-      "points": 0
+      name: 'Symmetra',
+      points: 0,
     },
     {
-      "name": "Torbjorn",
-      "points": 0
+      name: 'Torbjorn',
+      points: 0,
     },
     {
-      "name": "Tracer",
-      "points": 0
+      name: 'Tracer',
+      points: 0,
     },
     {
-      "name": "Widowmaker",
-      "points": 0
+      name: 'Widowmaker',
+      points: 0,
     },
     {
-      "name": "Winston",
-      "points": 0
+      name: 'Zarya',
+      points: 0,
     },
     {
-      "name": "Zarya",
-      "points": 0
+      name: 'Zenyatta',
+      points: 0,
     },
-  ]
+  ],
+  zarya: [
+    {
+      name: 'Ana',
+      points: 0,
+    },
+    {
+      name: 'Bastion',
+      points: 0,
+    },
+    {
+      name: 'Brigitte',
+      points: 0,
+    },
+    {
+      name: 'D.Va',
+      points: 0,
+    },
+    {
+      name: 'Doomfist',
+      points: 0,
+    },
+    {
+      name: 'Genji',
+      points: 0,
+    },
+    {
+      name: 'Hanzo',
+      points: 0,
+    },
+    {
+      name: 'Junkrat',
+      points: 0,
+    },
+    {
+      name: 'Lúcio',
+      points: 0,
+    },
+    {
+      name: 'McCree',
+      points: 0,
+    },
+    {
+      name: 'Mei',
+      points: 0,
+    },
+    {
+      name: 'Mercy',
+      points: 0,
+    },
+    {
+      name: 'Moira',
+      points: 0,
+    },
+    {
+      name: 'Orisa',
+      points: 0,
+    },
+    {
+      name: 'Pharah',
+      points: 0,
+    },
+    {
+      name: 'Reaper',
+      points: 0,
+    },
+    {
+      name: 'Reinhardt',
+      points: 0,
+    },
+    {
+      name: 'Roadhog',
+      points: 0,
+    },
+    {
+      name: 'Soldier: 76',
+      points: 0,
+    },
+    {
+      name: 'Sombra',
+      points: 0,
+    },
+    {
+      name: 'Symmetra',
+      points: 0,
+    },
+    {
+      name: 'Torbjorn',
+      points: 0,
+    },
+    {
+      name: 'Tracer',
+      points: 0,
+    },
+    {
+      name: 'Widowmaker',
+      points: 0,
+    },
+    {
+      name: 'Winston',
+      points: 0,
+    },
+    {
+      name: 'Zenyatta',
+      points: 0,
+    },
+  ],
+  zenyatta: [
+    {
+      name: 'Ana',
+      points: 0,
+    },
+    {
+      name: 'Bastion',
+      points: 0,
+    },
+    {
+      name: 'Brigitte',
+      points: 0,
+    },
+    {
+      name: 'D.Va',
+      points: 0,
+    },
+    {
+      name: 'Doomfist',
+      points: 0,
+    },
+    {
+      name: 'Genji',
+      points: 0,
+    },
+    {
+      name: 'Hanzo',
+      points: 0,
+    },
+    {
+      name: 'Junkrat',
+      points: 0,
+    },
+    {
+      name: 'Lúcio',
+      points: 0,
+    },
+    {
+      name: 'McCree',
+      points: 0,
+    },
+    {
+      name: 'Mei',
+      points: 0,
+    },
+    {
+      name: 'Mercy',
+      points: 0,
+    },
+    {
+      name: 'Moira',
+      points: 0,
+    },
+    {
+      name: 'Orisa',
+      points: 0,
+    },
+    {
+      name: 'Pharah',
+      points: 0,
+    },
+    {
+      name: 'Reaper',
+      points: 0,
+    },
+    {
+      name: 'Reinhardt',
+      points: 0,
+    },
+    {
+      name: 'Roadhog',
+      points: 0,
+    },
+    {
+      name: 'Soldier: 76',
+      points: 0,
+    },
+    {
+      name: 'Sombra',
+      points: 0,
+    },
+    {
+      name: 'Symmetra',
+      points: 0,
+    },
+    {
+      name: 'Torbjorn',
+      points: 0,
+    },
+    {
+      name: 'Tracer',
+      points: 0,
+    },
+    {
+      name: 'Widowmaker',
+      points: 0,
+    },
+    {
+      name: 'Winston',
+      points: 0,
+    },
+    {
+      name: 'Zarya',
+      points: 0,
+    },
+  ],
 };
 
 export default points;
