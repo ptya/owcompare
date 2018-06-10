@@ -163,12 +163,15 @@ body main .search-wrapper .search .search-list.hidden {
   display: none;
 }
 body main .search-wrapper .search .search-list .search-list-item {
+  line-height: 16px;
+  display: block;
   position: relative;
   padding: 6px 0;
   border: 1px solid rgba(255,129,0,0.169);
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   background: rgba(255,254,254,0.9);
+  width: 100%;
 }
 body main .search-wrapper .search .search-list .search-list-item:hover {
   border: 1px solid rgba(255,129,0,0.4);
