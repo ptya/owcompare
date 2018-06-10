@@ -4,22 +4,23 @@ import Compare from './Compare';
 
 const App = () => (
   <Compare>
-  {
-    (allHeroes,
-    availableHeroes,
-    points,
-    search,
-    selectedHeroes,
-    slots,
-    updateSearch,
-    updateSelected,
-    removeSelected) => (
+    {(
+      allHeroes,
+      availableHeroes,
+      points,
+      search,
+      selectedHeroes,
+      slots,
+      updateSearch,
+      updateSelected,
+      removeSelected
+    ) => (
       <Fragment>
         <Compare.Selection
           selectedHeroes={selectedHeroes}
           removeSelected={removeSelected}
           slots={slots}
-          />
+        />
         <Compare.Search
           availableHeroes={availableHeroes}
           search={search}
@@ -28,14 +29,9 @@ const App = () => (
           updateSelected={updateSelected}
           updateSearch={updateSearch}
         />
-        <Compare.Recommend
-          selectedHeroes={selectedHeroes}
-          allHeroes={allHeroes}
-          points={points}
-        />
+        <Compare.Recommend selectedHeroes={selectedHeroes} allHeroes={allHeroes} points={points} />
       </Fragment>
-    )
-  }
+    )}
   </Compare>
 );
 
