@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Hero from './Hero';
 
 class Selection extends Component {
@@ -10,35 +11,41 @@ class Selection extends Component {
   heroList = (hero, i) => {
     const selectedHero = this.props.selectedHeroes[hero];
     return (
-      <li key={hero} className={`flex-item flex-item-${i}`} >
+      <li key={hero} className={`flex-item flex-item-${i}`}>
         <Hero hero={selectedHero} />
-        <button className='close-btn' onClick={() => this.props.removeSelected(hero) }>&times;</button>
+        <button className="close-btn" onClick={() => this.props.removeSelected(hero)}>
+          &times;
+        </button>
       </li>
-    )
-  }
+    );
+  };
 
   unassigned = (e, i) => {
     const start = Object.keys(this.props.selectedHeroes).length;
     return (
-      <li key={i} className={`flex-item flex-item-${i+start} no-hero`}>
+      <li key={i} className={`flex-item flex-item-${i + start} no-hero`}>
         Empty
       </li>
-    )
-  }
+    );
+  };
 
   render() {
     const isAvailable = Object.keys(this.props.selectedHeroes).length < this.props.slots;
     const remaining = this.props.slots - Object.keys(this.props.selectedHeroes).length;
 
     return (
-      <ul className='flex-container'>
+      <ul className="flex-container">
         {Object.keys(this.props.selectedHeroes).map(this.heroList)}
-        { isAvailable &&
-          [...Array(remaining)].map(this.unassigned)
-        }
+        {isAvailable && [...Array(remaining)].map(this.unassigned)}
       </ul>
     );
   }
 }
+
+Selection.propTypes = {
+  selectedHeroes: PropTypes.object.isRequired,
+  slots: PropTypes.number.isRequired,
+  removeSelected: PropTypes.func.isRequired,
+};
 
 export default Selection;
