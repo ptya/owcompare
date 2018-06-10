@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Scrollbars } from 'react-custom-scrollbars';
+
+import CustomScrollbar from './CustomScrollbar';
 
 class Search extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -64,27 +65,6 @@ class Search extends Component {
     }
   }
 
-  heroList = (hero, i) => {
-    const { cursor } = this.state;
-    const listItemClass = ['search-list-item'];
-    if (cursor === i) {
-      listItemClass.push('active');
-    }
-    return (
-      <button
-        className={listItemClass.join(' ')}
-        key={i}
-        ref={cursor === i ? this.activeRef : i}
-        id={hero}
-        onMouseDown={() => this.handleClick(hero)}
-        onMouseOver={() => this.handleHover(i)}
-        onFocus={() => this.handleHover(i)}
-      >
-        {this.props.availableHeroes[hero].name}
-      </button>
-    );
-  };
-
   handleSubmit = e => {
     e.preventDefault();
     const { filteredHeroes, cursor } = this.state;
@@ -134,24 +114,32 @@ class Search extends Component {
     }
   };
 
+  heroList = (hero, i) => {
+    const { cursor } = this.state;
+    const listItemClass = ['search-list-item'];
+    if (cursor === i) {
+      listItemClass.push('active');
+    }
+    return (
+      <button
+        className={listItemClass.join(' ')}
+        key={i}
+        ref={cursor === i ? this.activeRef : i}
+        id={hero}
+        onMouseDown={() => this.handleClick(hero)}
+        onMouseOver={() => this.handleHover(i)}
+        onFocus={() => this.handleHover(i)}
+      >
+        {this.props.availableHeroes[hero].name}
+      </button>
+    );
+  };
+
   render() {
     const { filteredHeroes, toHide, lastSearch } = this.state;
-    const heroToShow = filteredHeroes.length > 0;
+    const listLength = filteredHeroes.length;
+    const heroToShow = listLength > 0;
     const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
-
-    // TODO: turn over to styled components and base all calculations on css values
-    const style = {
-      width: '335px',
-      height: '240px',
-      margin: 'auto',
-      borderBottom: '1px solid #ff81002b',
-    };
-    if (filteredHeroes.length < 8) {
-      style.height = filteredHeroes.length * 30;
-    }
-    if (toHide) {
-      style.display = 'none';
-    }
 
     return (
       <Fragment>
@@ -170,9 +158,14 @@ class Search extends Component {
                 onKeyDown={this.handleKeyDown}
               />
               {heroToShow && (
-                <Scrollbars style={style} universal ref={this.resultsRef}>
+                <CustomScrollbar
+                  universal
+                  reference={this.resultsRef}
+                  listLength={listLength}
+                  toHide={toHide}
+                >
                   <div className="search-list">{filteredHeroes.map(this.heroList)}</div>
-                </Scrollbars>
+                </CustomScrollbar>
               )}
             </form>
           </div>
