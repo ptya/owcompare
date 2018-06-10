@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import CustomScrollbar from './CustomScrollbar';
+import SearchItem from './SearchItem';
 
 class Search extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -116,22 +117,20 @@ class Search extends Component {
 
   heroList = (hero, i) => {
     const { cursor } = this.state;
-    const listItemClass = ['search-list-item'];
-    if (cursor === i) {
-      listItemClass.push('active');
-    }
+    const isActive = cursor === i;
+
     return (
-      <button
-        className={listItemClass.join(' ')}
+      <SearchItem
+        handleClick={this.handleClick}
+        handleHover={this.handleHover}
+        hero={hero}
+        i={i}
+        isActive={isActive}
         key={i}
-        ref={cursor === i ? this.activeRef : i}
-        id={hero}
-        onMouseDown={() => this.handleClick(hero)}
-        onMouseOver={() => this.handleHover(i)}
-        onFocus={() => this.handleHover(i)}
+        reference={isActive ? this.activeRef : i}
       >
         {this.props.availableHeroes[hero].name}
-      </button>
+      </SearchItem>
     );
   };
 
