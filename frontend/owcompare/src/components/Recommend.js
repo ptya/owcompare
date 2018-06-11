@@ -54,7 +54,7 @@ class Recommend extends Component {
       <Fragment>
         {heroToShow && (
           <div className="recommend-wrapper">
-            <Hero hero={hero} />
+            <Hero recommended hero={hero} />
             <div className="recommend-buttons">
               <button className="btn btn-left" onClick={() => this.prevHero()}>
                 {' '}
