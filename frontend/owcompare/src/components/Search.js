@@ -55,13 +55,13 @@ class Search extends Component {
     // Check if active item is visible and if not scroll accordingly
     const active = this.activeRef.current;
     const results = this.resultsRef.current;
-    if (active && results.container) {
+    if (active && results.$container) {
       const activeBounding = active.getBoundingClientRect();
-      const resultsBounding = results.container.getBoundingClientRect();
+      const resultsBounding = results.$container.getBoundingClientRect();
       if (Math.floor(activeBounding.bottom) > Math.floor(resultsBounding.bottom)) {
-        active.scrollIntoView(false);
+        results.scrollbar.scrollIntoView(active, { alignToTop: false });
       } else if (Math.ceil(activeBounding.top) < Math.ceil(resultsBounding.top)) {
-        active.scrollIntoView(true);
+        results.scrollbar.scrollIntoView(active, { alignToTop: true });
       }
     }
   }
