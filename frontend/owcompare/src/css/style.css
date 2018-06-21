@@ -140,13 +140,13 @@ body main .search-wrapper {
   position: relative;
   z-index: 999;
 }
-body main .search-wrapper .search {
+body main .search {
   position: absolute;
   width: 100%;
   text-align: center;
   top: -17.5px;
 }
-body main .search-wrapper .search .search-bar {
+body main .search-bar {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 35px;
@@ -154,15 +154,15 @@ body main .search-wrapper .search .search-bar {
   margin: auto;
   padding-left: 25px;
 }
-body main .search-wrapper .search .search-list {
+body main .search-list {
   width: 335px;
   margin: auto;
   max-height: 15rem;
 }
-body main .search-wrapper .search .search-list.hidden {
+body main .search-list.hidden {
   display: none;
 }
-body main .search-wrapper .search .search-list .search-list-item {
+body main .search-list .search-list-item {
   line-height: 16px;
   display: block;
   position: relative;
@@ -173,14 +173,14 @@ body main .search-wrapper .search .search-list .search-list-item {
   background: rgba(255,254,254,0.9);
   width: 100%;
 }
-body main .search-wrapper .search .search-list .search-list-item:hover {
+body main .search-list .search-list-item:hover {
   border: 1px solid rgba(255,129,0,0.4);
   letter-spacing: 1px;
 }
-body main .search-wrapper .search .search-list .search-list-item.active {
+body main .search-list .search-list-item.active {
   background: rgba(243,241,212,0.9);
 }
-body main .search-wrapper .search .search-list .search-list-item.active:after {
+body main .search-list .search-list-item.active:after {
   position: absolute;
   right: 25px;
   content: "select ⏎";
