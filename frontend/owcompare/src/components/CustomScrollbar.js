@@ -5,12 +5,15 @@ import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
 import Scrollbar from 'react-smooth-scrollbar';
 import styled from 'styled-components';
 
+import { SEARCH_WIDTH, SEARCH_ITEM_HEIGHT } from '../constants';
+
 SmoothScrollbar.use(OverscrollPlugin);
 
 const StyledScrollbar = styled(Scrollbar)`
   display: ${props => (props.hidden ? 'none !important' : 'block')};
-  width: 335px;
-  height: ${props => (props.len < 8 ? `${props.len * 30}px` : '240px')};
+  width: ${SEARCH_WIDTH - 15}px;
+  height: ${props =>
+    props.len < 8 ? `${props.len * SEARCH_ITEM_HEIGHT}px` : `${SEARCH_ITEM_HEIGHT * 8}px`};
   margin: auto;
   border-bottom: 1px solid #ff81002b;
 `;
