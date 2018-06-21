@@ -169,7 +169,7 @@ class Search extends Component {
                 listLength={listLength}
                 toHide={toHide}
               >
-                <div className="search-list">{filteredHeroes.map(this.heroList)}</div>
+                {filteredHeroes.map(this.heroList)}
               </CustomScrollbar>
             )}
           </SearchForm>
