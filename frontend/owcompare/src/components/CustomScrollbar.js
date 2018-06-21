@@ -5,7 +5,7 @@ import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
 import Scrollbar from 'react-smooth-scrollbar';
 import styled from 'styled-components';
 
-import { SEARCH_WIDTH, SEARCH_ITEM_HEIGHT } from '../constants';
+import { SEARCH_WIDTH, SEARCH_ITEM_HEIGHT } from '../utils/style-utils';
 
 SmoothScrollbar.use(OverscrollPlugin);
 

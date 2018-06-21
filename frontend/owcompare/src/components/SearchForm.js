@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { SEARCHBAR_HEIGHT, SEARCH_WIDTH } from '../constants';
+import { SEARCHBAR_HEIGHT, SEARCH_WIDTH } from '../utils/style-utils';
 
 const StyledDiv = styled.div`
   position: relative;
