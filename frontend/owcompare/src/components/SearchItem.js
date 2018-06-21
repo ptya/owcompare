@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-const Button = styled.button`
+const StyledButton = styled.button`
   line-height: 16px;
   display: block;
   position: relative;
@@ -28,23 +28,21 @@ const Button = styled.button`
     `};
 `;
 
-class SearchItem extends Component {
-  render() {
-    const { i, hero, isActive, handleClick, handleHover, reference } = this.props;
-    return (
-      <Button
-        id={hero}
-        innerRef={reference}
-        active={isActive}
-        onMouseDown={() => handleClick(hero)}
-        onMouseOver={() => handleHover(i)}
-        onFocus={() => handleHover(i)}
-      >
-        {this.props.children}
-      </Button>
-    );
-  }
-}
+const SearchItem = props => {
+  const { i, hero, isActive, handleClick, handleHover, reference } = props;
+  return (
+    <StyledButton
+      id={hero}
+      innerRef={reference}
+      active={isActive}
+      onMouseDown={() => handleClick(hero)}
+      onMouseOver={() => handleHover(i)}
+      onFocus={() => handleHover(i)}
+    >
+      {props.children}
+    </StyledButton>
+  );
+};
 
 SearchItem.propTypes = {
   children: PropTypes.any.isRequired,

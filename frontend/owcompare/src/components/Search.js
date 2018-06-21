@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
+import SearchForm from './SearchForm';
 import CustomScrollbar from './CustomScrollbar';
 import SearchItem from './SearchItem';
 
@@ -51,7 +52,6 @@ class Search extends Component {
     if (this.searchRef.current && !toHide) {
       this.searchRef.current.focus();
     }
-
     // Check if active item is visible and if not scroll accordingly
     const active = this.activeRef.current;
     const results = this.resultsRef.current;
@@ -135,39 +135,44 @@ class Search extends Component {
   };
 
   render() {
-    const { filteredHeroes, toHide, lastSearch } = this.state;
+    const { filteredHeroes, toHide, lastSearch, cursor } = this.state;
+    const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
+
     const listLength = filteredHeroes.length;
     const heroToShow = listLength > 0;
-    const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
     return (
       <Fragment>
         {availableSpace && (
-          <div className="search-wrapper">
-            <form id="search" className="search" onSubmit={this.handleSubmit}>
-              <input
-                className="search-bar"
-                type="text"
-                ref={this.searchRef}
-                value={lastSearch}
-                placeholder="Start typing a hero's name.."
-                onChange={this.props.updateSearch}
-                onFocus={this.handleFocus}
-                onBlur={this.handleBlur}
-                onKeyDown={this.handleKeyDown}
-              />
-              {heroToShow && (
-                <CustomScrollbar
-                  universal
-                  reference={this.resultsRef}
-                  listLength={listLength}
-                  toHide={toHide}
-                >
-                  <div className="search-list">{filteredHeroes.map(this.heroList)}</div>
-                </CustomScrollbar>
-              )}
-            </form>
-          </div>
+          <SearchForm
+            activeRef={this.activeRef}
+            availableSpace={availableSpace}
+            availableHeroes={this.props.availableHeroes}
+            cursor={cursor}
+            filteredHeroes={filteredHeroes}
+            handleBlur={this.handleBlur}
+            handleClick={this.handleClick}
+            handleFocus={this.handleFocus}
+            handleHover={this.handleHover}
+            handleKeyDown={this.handleKeyDown}
+            handleSubmit={this.handleSubmit}
+            lastSearch={lastSearch}
+            resultsRef={this.resultsRef}
+            searchRef={this.searchRef}
+            toHide={toHide}
+            updateSearch={this.props.updateSearch}
+          >
+            {heroToShow && (
+              <CustomScrollbar
+                universal
+                reference={this.resultsRef}
+                listLength={listLength}
+                toHide={toHide}
+              >
+                <div className="search-list">{filteredHeroes.map(this.heroList)}</div>
+              </CustomScrollbar>
+            )}
+          </SearchForm>
         )}
       </Fragment>
     );
