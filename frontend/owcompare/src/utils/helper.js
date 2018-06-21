@@ -1,4 +1,4 @@
-import counters from './data/counters';
+import counters from '../data/counters';
 
 export const getRandomPoints = () => {
   const points = { ...counters };

@@ -7,7 +7,7 @@ import Search from './Search';
 import Selection from './Selection';
 import Recommend from './Recommend';
 
-import { getRandomPoints } from '../helper';
+import { getRandomPoints } from '../utils/helper';
 
 class Compare extends Component {
   static Search = Search;
