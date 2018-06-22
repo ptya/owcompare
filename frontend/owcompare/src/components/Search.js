@@ -115,27 +115,9 @@ class Search extends Component {
     }
   };
 
-  heroList = (hero, i) => {
-    const { cursor } = this.state;
-    const isActive = cursor === i;
-
-    return (
-      <SearchItem
-        handleClick={this.handleClick}
-        handleHover={this.handleHover}
-        hero={hero}
-        i={i}
-        isActive={isActive}
-        key={i}
-        reference={isActive ? this.activeRef : i}
-      >
-        {this.props.availableHeroes[hero].name}
-      </SearchItem>
-    );
-  };
-
   render() {
     const { filteredHeroes, toHide, lastSearch, cursor } = this.state;
+    const { availableHeroes, updateSearch } = this.props;
     const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
     const listLength = filteredHeroes.length;
@@ -145,22 +127,14 @@ class Search extends Component {
       <Fragment>
         {availableSpace && (
           <SearchForm
-            activeRef={this.activeRef}
-            availableSpace={availableSpace}
-            availableHeroes={this.props.availableHeroes}
-            cursor={cursor}
-            filteredHeroes={filteredHeroes}
             handleBlur={this.handleBlur}
             handleClick={this.handleClick}
             handleFocus={this.handleFocus}
-            handleHover={this.handleHover}
             handleKeyDown={this.handleKeyDown}
             handleSubmit={this.handleSubmit}
             lastSearch={lastSearch}
-            resultsRef={this.resultsRef}
             searchRef={this.searchRef}
-            toHide={toHide}
-            updateSearch={this.props.updateSearch}
+            updateSearch={updateSearch}
           >
             {heroToShow && (
               <CustomScrollbar
@@ -169,7 +143,19 @@ class Search extends Component {
                 listLength={listLength}
                 toHide={toHide}
               >
-                {filteredHeroes.map(this.heroList)}
+                {filteredHeroes.map((hero, i) => (
+                  <SearchItem
+                    handleClick={this.handleClick}
+                    handleHover={this.handleHover}
+                    hero={hero}
+                    i={i}
+                    isActive={cursor === i}
+                    key={i}
+                    reference={cursor === i ? this.activeRef : i}
+                  >
+                    {availableHeroes[hero].name}
+                  </SearchItem>
+                ))}
               </CustomScrollbar>
             )}
           </SearchForm>
