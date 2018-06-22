@@ -56,10 +56,10 @@ const SearchForm = props => {
 
 SearchForm.propTypes = {
   children: PropTypes.any.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
-  handleFocus: PropTypes.func.isRequired,
   handleBlur: PropTypes.func.isRequired,
+  handleFocus: PropTypes.func.isRequired,
   handleKeyDown: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
   lastSearch: PropTypes.string.isRequired,
   searchRef: PropTypes.object.isRequired,
   updateSearch: PropTypes.func.isRequired,
