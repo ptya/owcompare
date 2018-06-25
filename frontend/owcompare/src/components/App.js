@@ -10,6 +10,7 @@ const App = () => {
       {(
         allHeroes,
         availableHeroes,
+        err,
         points,
         search,
         selectedHeroes,
@@ -26,6 +27,7 @@ const App = () => {
           />
           <Compare.Search
             availableHeroes={availableHeroes}
+            err={err}
             search={search}
             selectedHeroes={selectedHeroes}
             slots={slots}

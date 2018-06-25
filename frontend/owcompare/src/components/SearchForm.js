@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { SEARCHBAR_HEIGHT, SEARCH_WIDTH } from '../utils/style-utils';
+import { errSearch } from '../styles/KeyFrames';
 
 const StyledDiv = styled.div`
   position: relative;
@@ -17,15 +18,23 @@ const StyledForm = styled.form`
 `;
 
 const StyledInput = styled.input`
+  border: 1px solid #a9a9a9;
   box-sizing: border-box;
   height: ${SEARCHBAR_HEIGHT}px;
   width: ${SEARCH_WIDTH}px;
-  margin: auto;
+  /* margin: auto; */
   padding-left: 25px;
+  ${props =>
+    props.err &&
+    css`
+      animation: ${errSearch} 0.5s 0s 1 ease-in-out;
+    `
+  };
 `;
 
 const SearchForm = props => {
   const {
+    err,
     searchRef,
     lastSearch,
     updateSearch,
@@ -34,12 +43,13 @@ const SearchForm = props => {
     handleBlur,
     handleKeyDown,
   } = props;
-
+  console.log(err);
   return (
     <StyledDiv>
       <StyledForm id="search" onSubmit={handleSubmit}>
         <StyledInput
           type="text"
+          err={err}
           innerRef={searchRef}
           value={lastSearch}
           placeholder="Start typing a hero's name.."

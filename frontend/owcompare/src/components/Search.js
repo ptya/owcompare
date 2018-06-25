@@ -8,9 +8,9 @@ import SearchItem from './SearchItem';
 class Search extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     const { search, availableHeroes } = nextProps;
-    let { cursor, filteredHeroes, lastSearch } = prevState;
+    let { filteredHeroes, lastSearch } = prevState;
     if (search !== lastSearch) {
-      cursor = 0;
+      const cursor = 0;
       lastSearch = search;
       filteredHeroes = Object.keys(availableHeroes)
         .sort()
@@ -117,7 +117,7 @@ class Search extends Component {
 
   render() {
     const { filteredHeroes, toHide, lastSearch, cursor } = this.state;
-    const { availableHeroes, updateSearch } = this.props;
+    const { availableHeroes, updateSearch, err } = this.props;
     const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
 
     const listLength = filteredHeroes.length;
@@ -127,6 +127,7 @@ class Search extends Component {
       <Fragment>
         {availableSpace && (
           <SearchForm
+            err={err}
             handleBlur={this.handleBlur}
             handleClick={this.handleClick}
             handleFocus={this.handleFocus}

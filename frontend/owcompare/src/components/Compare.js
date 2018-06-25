@@ -17,6 +17,7 @@ class Compare extends Component {
   state = {
     allHeroes: heroes,
     availableHeroes: heroes,
+    err: false,
     search: '',
     selectedHeroes: {},
     slots: 6,
@@ -26,8 +27,10 @@ class Compare extends Component {
   updateSearch = e => {
     const nextSearch = e.target.value;
     if (nextSearch === '') {
-      this.setState({ search: nextSearch });
+      this.setState({ search: nextSearch, err: false });
     } else {
+      this.setState({ err: false });
+      console.log('yay');
       const filteredHeroes = Object.keys(this.state.availableHeroes).filter(hero => {
         const current = this.state.availableHeroes[hero];
         return (
@@ -35,7 +38,7 @@ class Compare extends Component {
           current.id.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1
         );
       });
-      if (filteredHeroes.length > 0) this.setState({ search: nextSearch });
+      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch, err: false }) : this.setState({ err: true});
     }
   };
 
@@ -69,7 +72,7 @@ class Compare extends Component {
   };
 
   render() {
-    const { allHeroes, availableHeroes, points, search, selectedHeroes, slots } = this.state;
+    const { allHeroes, availableHeroes, err, points, search, selectedHeroes, slots } = this.state;
     const { updateSearch, updateSelected, removeSelected } = this;
 
     return (
@@ -77,6 +80,7 @@ class Compare extends Component {
         {this.props.children(
           allHeroes,
           availableHeroes,
+          err,
           points,
           search,
           selectedHeroes,
