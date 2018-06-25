@@ -43,7 +43,6 @@ const SearchForm = props => {
     handleBlur,
     handleKeyDown,
   } = props;
-  console.log(err);
   return (
     <StyledDiv>
       <StyledForm id="search" onSubmit={handleSubmit}>

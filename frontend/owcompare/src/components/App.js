@@ -9,8 +9,8 @@ const App = () => {
     <Compare>
       {(
         allHeroes,
-        availableHeroes,
         err,
+        availableHeroes,
         points,
         search,
         selectedHeroes,

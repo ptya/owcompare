@@ -16,21 +16,27 @@ class Compare extends Component {
 
   state = {
     allHeroes: heroes,
-    availableHeroes: heroes,
     err: false,
+    availableHeroes: heroes,
     search: '',
     selectedHeroes: {},
     slots: 6,
     points: getRandomPoints(),
   };
 
+  erroneous = () => {
+    this.setState({ err: true}, () => {
+      const self = this;
+      if (window.err) clearTimeout(window.err);
+      window.err = setTimeout(() => self.setState({ err: false }), 500);
+    });
+  }
+
   updateSearch = e => {
     const nextSearch = e.target.value;
     if (nextSearch === '') {
       this.setState({ search: nextSearch, err: false });
     } else {
-      this.setState({ err: false });
-      console.log('yay');
       const filteredHeroes = Object.keys(this.state.availableHeroes).filter(hero => {
         const current = this.state.availableHeroes[hero];
         return (
@@ -38,7 +44,7 @@ class Compare extends Component {
           current.id.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1
         );
       });
-      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch, err: false }) : this.setState({ err: true});
+      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch, err: false }) : this.erroneous();
     }
   };
 
@@ -79,8 +85,8 @@ class Compare extends Component {
       <Fragment>
         {this.props.children(
           allHeroes,
-          availableHeroes,
           err,
+          availableHeroes,
           points,
           search,
           selectedHeroes,
