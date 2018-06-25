@@ -1,43 +1,63 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
 import Hero from './Hero';
 
+import { MAXHEIGHT, MAXWIDTH } from '../utils/style-utils';
+
+const StyledButton = styled.button`
+  position: absolute;
+  right: 0;
+`;
+
+const StyledUl = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  max-width: ${MAXWIDTH}vw;
+  height: ${Math.round(MAXHEIGHT / 3)}vh;
+  background: red;
+  justify-content: flex-start;
+`;
+
+const StyledLi = styled.li`
+  flex-basis: ${MAXWIDTH / 3}%;
+  flex-grow: 0;
+  position: relative;
+  //padding: 2px;
+  background: yellow;
+  height: 50%;
+`;
+
 class Selection extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     const updatedHeroList = this.props.selectedHeroes !== nextProps.selectedHeroes;
     return updatedHeroList;
   }
 
-  heroList = (hero, i) => {
+  heroList = hero => {
     const selectedHero = this.props.selectedHeroes[hero];
     return (
-      <li key={hero} className={`flex-item flex-item-${i}`}>
+      <StyledLi key={hero}>
         <Hero hero={selectedHero} />
-        <button className="close-btn" onClick={() => this.props.removeSelected(hero)}>
-          &times;
-        </button>
-      </li>
+        <StyledButton onClick={() => this.props.removeSelected(hero)}>&times;</StyledButton>
+      </StyledLi>
     );
   };
 
-  unassigned = (e, i) => {
-    const start = Object.keys(this.props.selectedHeroes).length;
-    return (
-      <li key={i} className={`flex-item flex-item-${i + start} no-hero`}>
-        Empty
-      </li>
-    );
-  };
+  unassigned = (e, i) => <StyledLi key={i}>Empty</StyledLi>;
 
   render() {
-    const isAvailable = Object.keys(this.props.selectedHeroes).length < this.props.slots;
-    const remaining = this.props.slots - Object.keys(this.props.selectedHeroes).length;
+    const { selectedHeroes, slots } = this.props;
+    const selectedNumber = Object.keys(selectedHeroes).length;
+    const isAvailable = selectedNumber < slots;
+    const remaining = slots - selectedNumber;
 
     return (
-      <ul className="flex-container">
-        {Object.keys(this.props.selectedHeroes).map(this.heroList)}
+      <StyledUl>
+        {Object.keys(selectedHeroes).map(this.heroList)}
         {isAvailable && [...Array(remaining)].map(this.unassigned)}
-      </ul>
+      </StyledUl>
     );
   }
 }
