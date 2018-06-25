@@ -1,6 +1,36 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
 import Hero from './Hero';
+import { MAXHEIGHT } from '../utils/style-utils';
+
+const StyledWrapper = styled.div`
+  height: ${Math.round((MAXHEIGHT / 3) * 2)}vh;
+  position: relative;
+`;
+
+const StyledFlexDiv = styled.div`
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+`;
+
+const StyledButton = styled.button`
+  flex-grow: 1;
+  background: none;
+  border: none;
+  text-align: ${props => (props.right ? 'right' : 'left')};
+  margin-left: ${props => (props.right ? '20%' : '0')};
+  margin-right: ${props => (props.right ? '0' : '20%')};
+
+  &:hover {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+`;
 
 class Recommend extends Component {
   state = {
@@ -53,19 +83,15 @@ class Recommend extends Component {
     return (
       <Fragment>
         {heroToShow && (
-          <div className="recommend-wrapper">
+          <StyledWrapper>
             <Hero recommended hero={hero} />
-            <div className="recommend-buttons">
-              <button className="btn btn-left" onClick={() => this.prevHero()}>
-                {' '}
-                ◄{' '}
-              </button>
-              <button className="btn btn-right" onClick={() => this.nextHero()}>
-                {' '}
-                ►{' '}
-              </button>
-            </div>
-          </div>
+            <StyledFlexDiv>
+              <StyledButton onClick={() => this.prevHero()}> ◄ </StyledButton>
+              <StyledButton right onClick={() => this.nextHero()}>
+                ►
+              </StyledButton>
+            </StyledFlexDiv>
+          </StyledWrapper>
         )}
       </Fragment>
     );
