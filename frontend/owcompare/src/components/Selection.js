@@ -9,6 +9,9 @@ import { MAXHEIGHT, MAXWIDTH } from '../utils/style-utils';
 const StyledButton = styled.button`
   position: absolute;
   right: 0;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const StyledUl = styled.ul`
