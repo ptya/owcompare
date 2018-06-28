@@ -168,6 +168,7 @@ class Search extends Component {
 
 Search.propTypes = {
   availableHeroes: PropTypes.object.isRequired,
+  err: PropTypes.bool.isRequired,
   selectedHeroes: PropTypes.object.isRequired,
   slots: PropTypes.number.isRequired,
   updateSearch: PropTypes.func.isRequired,
