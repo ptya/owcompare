@@ -25,12 +25,12 @@ class Compare extends Component {
   };
 
   erroneous = () => {
-    this.setState({ err: true}, () => {
+    this.setState({ err: true }, () => {
       const self = this;
       if (window.err) clearTimeout(window.err);
       window.err = setTimeout(() => self.setState({ err: false }), 500);
     });
-  }
+  };
 
   updateSearch = e => {
     const nextSearch = e.target.value;
@@ -44,7 +44,9 @@ class Compare extends Component {
           current.id.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1
         );
       });
-      (filteredHeroes.length > 0) ? this.setState({ search: nextSearch, err: false }) : this.erroneous();
+      filteredHeroes.length > 0
+        ? this.setState({ search: nextSearch, err: false })
+        : this.erroneous();
     }
   };
 

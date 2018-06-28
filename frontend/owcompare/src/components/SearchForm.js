@@ -28,8 +28,7 @@ const StyledInput = styled.input`
     props.err &&
     css`
       animation: ${errSearch} 0.5s 0s 1 ease-in-out;
-    `
-  };
+    `};
 `;
 
 const SearchForm = props => {
@@ -65,6 +64,7 @@ const SearchForm = props => {
 
 SearchForm.propTypes = {
   children: PropTypes.any.isRequired,
+  err: PropTypes.bool.isRequired,
   handleBlur: PropTypes.func.isRequired,
   handleFocus: PropTypes.func.isRequired,
   handleKeyDown: PropTypes.func.isRequired,
