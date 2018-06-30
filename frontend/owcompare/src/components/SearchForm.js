@@ -24,8 +24,8 @@ const StyledInput = styled.input`
   width: ${SEARCH_WIDTH}px;
   /* margin: auto; */
   padding-left: 25px;
-  ${props =>
-    props.err &&
+  ${propss =>
+    propss.err &&
     css`
       animation: ${errSearch} 0.5s 0s 1 ease-in-out;
     `};
@@ -33,6 +33,7 @@ const StyledInput = styled.input`
 
 const SearchForm = props => {
   const {
+    children,
     err,
     searchRef,
     lastSearch,
@@ -56,7 +57,7 @@ const SearchForm = props => {
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
         />
-        {props.children}
+        {children}
       </StyledForm>
     </StyledDiv>
   );

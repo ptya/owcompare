@@ -22,9 +22,9 @@ const StyledButton = styled.button`
   flex-grow: 1;
   background: none;
   border: none;
-  text-align: ${props => (props.right ? 'right' : 'left')};
-  margin-left: ${props => (props.right ? '20%' : '0')};
-  margin-right: ${props => (props.right ? '0' : '20%')};
+  text-align: ${propss => (propss.right ? 'right' : 'left')};
+  margin-left: ${propss => (propss.right ? '20%' : '0')};
+  margin-right: ${propss => (propss.right ? '0' : '20%')};
 
   &:hover {
     font-size: 2rem;
@@ -38,8 +38,10 @@ class Recommend extends Component {
   };
 
   shouldComponentUpdate(nextProps, nextState) {
-    const updatedHeroList = this.props.selectedHeroes !== nextProps.selectedHeroes;
-    const updatedPosition = this.state.position !== nextState.position;
+    const { selectedHeroes } = this.props;
+    const { position } = this.state;
+    const updatedHeroList = selectedHeroes !== nextProps.selectedHeroes;
+    const updatedPosition = position !== nextState.position;
     return updatedHeroList || updatedPosition;
   }
 
@@ -62,13 +64,15 @@ class Recommend extends Component {
   };
 
   nextHero = () => {
-    let newPosition = this.state.position;
+    const { position } = this.state;
+    let newPosition = position;
     newPosition = newPosition >= 5 ? 0 : newPosition + 1;
     this.setState({ position: newPosition });
   };
 
   prevHero = () => {
-    let newPosition = this.state.position;
+    const { position } = this.state;
+    let newPosition = position;
     newPosition = newPosition <= 0 ? 5 : newPosition - 1;
     this.setState({ position: newPosition });
   };

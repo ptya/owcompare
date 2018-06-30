@@ -6,31 +6,6 @@ import CustomScrollbar from './CustomScrollbar';
 import SearchItem from './SearchItem';
 
 class Search extends Component {
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const { search, availableHeroes } = nextProps;
-    let { filteredHeroes, lastSearch } = prevState;
-    if (search !== lastSearch) {
-      const cursor = 0;
-      lastSearch = search;
-      filteredHeroes = Object.keys(availableHeroes)
-        .sort()
-        .filter(hero => {
-          if (search === '') return '';
-          return (
-            availableHeroes[hero].name.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
-            availableHeroes[hero].id.toLowerCase().indexOf(search.toLowerCase()) !== -1
-          );
-        });
-      return {
-        ...prevState,
-        cursor,
-        filteredHeroes,
-        lastSearch,
-      };
-    }
-    return null;
-  }
-
   constructor(props) {
     super(props);
     this.searchRef = React.createRef();
@@ -66,16 +41,43 @@ class Search extends Component {
     }
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { search, availableHeroes } = nextProps;
+    let { filteredHeroes, lastSearch } = prevState;
+    if (search !== lastSearch) {
+      const cursor = 0;
+      lastSearch = search;
+      filteredHeroes = Object.keys(availableHeroes)
+        .sort()
+        .filter(hero => {
+          if (search === '') return '';
+          return (
+            availableHeroes[hero].name.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+            availableHeroes[hero].id.toLowerCase().indexOf(search.toLowerCase()) !== -1
+          );
+        });
+      return {
+        ...prevState,
+        cursor,
+        filteredHeroes,
+        lastSearch,
+      };
+    }
+    return null;
+  }
+
   handleSubmit = e => {
     e.preventDefault();
     const { filteredHeroes, cursor } = this.state;
+    const { updateSelected } = this.props;
     if (filteredHeroes.length > 0) {
-      this.props.updateSelected(filteredHeroes[cursor]);
+      updateSelected(filteredHeroes[cursor]);
     }
   };
 
   handleClick = heroId => {
-    this.props.updateSelected(heroId);
+    const { updateSelected } = this.props;
+    updateSelected(heroId);
   };
 
   handleFocus = () => {
@@ -101,7 +103,8 @@ class Search extends Component {
     if (e.keyCode === 38) {
       // Arrow up
       e.preventDefault();
-      const len = this.state.lastSearch.length * 2; // Opera sometimes sees a carriage return as 2 characters
+      const { lastSearch } = this.state;
+      const len = lastSearch.length * 2; // Opera sometimes sees a carriage return as 2 characters
       this.searchRef.current.setSelectionRange(len, len);
     }
     const { cursor, filteredHeroes } = this.state;
@@ -117,8 +120,8 @@ class Search extends Component {
 
   render() {
     const { filteredHeroes, toHide, lastSearch, cursor } = this.state;
-    const { availableHeroes, updateSearch, err } = this.props;
-    const availableSpace = Object.keys(this.props.selectedHeroes).length < this.props.slots;
+    const { availableHeroes, updateSearch, err, selectedHeroes, slots } = this.props;
+    const availableSpace = Object.keys(selectedHeroes).length < slots;
 
     const listLength = filteredHeroes.length;
     const heroToShow = listLength > 0;

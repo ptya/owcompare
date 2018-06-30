@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Img = styled.img`
-  display: ${props => (props.recommended ? 'block' : 'initial')};
+  display: ${prop => (prop.recommended ? 'block' : 'initial')};
   height: 100%;
   object-fit: cover;
   width: 100%;
 `;
 
-const Hero = props => (
-  <Img recommended={props.recommended} src={props.hero.img} alt={props.hero.name} />
+const Hero = ({ recommended, hero }) => (
+  <Img recommended={recommended} src={hero.img} alt={hero.name} />
 );
 
 Hero.defaultProps = {

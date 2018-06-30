@@ -27,23 +27,25 @@ const StyledLi = styled.li`
   flex-basis: ${MAXWIDTH / 3}%;
   flex-grow: 0;
   position: relative;
-  //padding: 2px;
+  /* //padding: 2px; */
   background: yellow;
   height: 50%;
 `;
 
 class Selection extends Component {
   shouldComponentUpdate(nextProps) {
-    const updatedHeroList = this.props.selectedHeroes !== nextProps.selectedHeroes;
+    const { selectedHeroes } = this.props;
+    const updatedHeroList = selectedHeroes !== nextProps.selectedHeroes;
     return updatedHeroList;
   }
 
   heroList = hero => {
-    const selectedHero = this.props.selectedHeroes[hero];
+    const { selectedHeroes, removeSelected } = this.props;
+    const selectedHero = selectedHeroes[hero];
     return (
       <StyledLi key={hero}>
         <Hero hero={selectedHero} />
-        <StyledButton onClick={() => this.props.removeSelected(hero)}>&times;</StyledButton>
+        <StyledButton onClick={() => removeSelected(hero)}>&times;</StyledButton>
       </StyledLi>
     );
   };

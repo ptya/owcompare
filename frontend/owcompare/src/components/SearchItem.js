@@ -9,10 +9,11 @@ const StyledButton = styled.button`
   padding: 6px 0;
   border: 1px solid rgba(255, 129, 0, 0.17);
   transition: all 0.1s;
-  background: ${props => (props.active ? 'rgba(243, 241, 212, 0.9)' : 'rgba(255, 254, 254, 0.9)')};
+  background: ${propss =>
+    propss.active ? 'rgba(243, 241, 212, 0.9)' : 'rgba(255, 254, 254, 0.9)'};
   width: 100%;
-  ${props =>
-    props.active &&
+  ${propss =>
+    propss.active &&
     css`
       border: 1px solid rgba(255, 129, 0, 0.4);
       letter-spacing: 1px;
@@ -29,7 +30,7 @@ const StyledButton = styled.button`
 `;
 
 const SearchItem = props => {
-  const { i, hero, isActive, handleClick, handleHover, reference } = props;
+  const { children, i, hero, isActive, handleClick, handleHover, reference } = props;
   return (
     <StyledButton
       id={hero}
@@ -39,7 +40,7 @@ const SearchItem = props => {
       onMouseOver={() => handleHover(i)}
       onFocus={() => handleHover(i)}
     >
-      {props.children}
+      {children}
     </StyledButton>
   );
 };

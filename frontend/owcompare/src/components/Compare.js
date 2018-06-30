@@ -11,7 +11,9 @@ import { getRandomPoints } from '../utils/helper';
 
 class Compare extends Component {
   static Search = Search;
+
   static Selection = Selection;
+
   static Recommend = Recommend;
 
   state = {
@@ -34,11 +36,12 @@ class Compare extends Component {
 
   updateSearch = e => {
     const nextSearch = e.target.value;
+    const { availableHeroes } = this.state;
     if (nextSearch === '') {
       this.setState({ search: nextSearch, err: false });
     } else {
-      const filteredHeroes = Object.keys(this.state.availableHeroes).filter(hero => {
-        const current = this.state.availableHeroes[hero];
+      const filteredHeroes = Object.keys(availableHeroes).filter(hero => {
+        const current = availableHeroes[hero];
         return (
           current.name.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1 ||
           current.id.toLowerCase().indexOf(nextSearch.toLowerCase()) !== -1
@@ -51,17 +54,17 @@ class Compare extends Component {
   };
 
   updateSelected = key => {
-    const selectedHeroes = { ...this.state.selectedHeroes };
-    if (Object.keys(selectedHeroes).length < this.state.slots) {
+    const { availableHeroes, selectedHeroes, slots } = this.state;
+    if (Object.keys(selectedHeroes).length < slots) {
       // add selected hero to state
-      const availableHeroes = { ...this.state.availableHeroes };
       const hero = availableHeroes[key];
-      selectedHeroes[key] = { ...hero };
-      this.setState({ selectedHeroes });
+      const newSelectedHeroes = { ...selectedHeroes, [key]: hero };
+      this.setState({ selectedHeroes: newSelectedHeroes });
 
       // remove selected hero from availableHeroes
-      delete availableHeroes[key];
-      this.setState({ availableHeroes });
+      const nextAvailableHeroes = { ...availableHeroes };
+      delete nextAvailableHeroes[key];
+      this.setState({ availableHeroes: nextAvailableHeroes });
 
       // reset search bar
       this.setState({ search: '' });
@@ -69,23 +72,25 @@ class Compare extends Component {
   };
 
   removeSelected = key => {
-    const selectedHeroes = { ...this.state.selectedHeroes };
-    const availableHeroes = { ...this.state.availableHeroes };
+    const { selectedHeroes, availableHeroes } = this.state;
     const hero = selectedHeroes[key];
-    delete selectedHeroes[key];
-    this.setState({ selectedHeroes });
 
-    availableHeroes[key] = { ...hero };
-    this.setState({ availableHeroes });
+    const newSelectedHeroes = { ...selectedHeroes };
+    delete newSelectedHeroes[key];
+    this.setState({ selectedHeroes: newSelectedHeroes });
+
+    const newAvailableHeroes = { ...availableHeroes, [key]: hero };
+    this.setState({ availableHeroes: newAvailableHeroes });
   };
 
   render() {
     const { allHeroes, availableHeroes, err, points, search, selectedHeroes, slots } = this.state;
     const { updateSearch, updateSelected, removeSelected } = this;
+    const { children } = this.props;
 
     return (
       <Fragment>
-        {this.props.children(
+        {children(
           allHeroes,
           err,
           availableHeroes,
