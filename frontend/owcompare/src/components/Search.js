@@ -6,6 +6,31 @@ import CustomScrollbar from './CustomScrollbar';
 import SearchItem from './SearchItem';
 
 class Search extends Component {
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { search, availableHeroes } = nextProps;
+    let { filteredHeroes, lastSearch } = prevState;
+    if (search !== lastSearch) {
+      const cursor = 0;
+      lastSearch = search;
+      filteredHeroes = Object.keys(availableHeroes)
+        .sort()
+        .filter(hero => {
+          if (search === '') return '';
+          return (
+            availableHeroes[hero].name.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+            availableHeroes[hero].id.toLowerCase().indexOf(search.toLowerCase()) !== -1
+          );
+        });
+      return {
+        ...prevState,
+        cursor,
+        filteredHeroes,
+        lastSearch,
+      };
+    }
+    return null;
+  }
+
   constructor(props) {
     super(props);
     this.searchRef = React.createRef();
@@ -39,31 +64,6 @@ class Search extends Component {
         results.scrollbar.scrollIntoView(active, { alignToTop: true });
       }
     }
-  }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const { search, availableHeroes } = nextProps;
-    let { filteredHeroes, lastSearch } = prevState;
-    if (search !== lastSearch) {
-      const cursor = 0;
-      lastSearch = search;
-      filteredHeroes = Object.keys(availableHeroes)
-        .sort()
-        .filter(hero => {
-          if (search === '') return '';
-          return (
-            availableHeroes[hero].name.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
-            availableHeroes[hero].id.toLowerCase().indexOf(search.toLowerCase()) !== -1
-          );
-        });
-      return {
-        ...prevState,
-        cursor,
-        filteredHeroes,
-        lastSearch,
-      };
-    }
-    return null;
   }
 
   handleSubmit = e => {
