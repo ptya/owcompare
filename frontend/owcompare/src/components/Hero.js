@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Img = styled.img`
-  display: ${prop => (prop.recommended ? 'block' : 'initial')};
+  display: ${({ recommended }) => (recommended ? 'block' : 'initial')};
   height: 100%;
   object-fit: cover;
   width: 100%;

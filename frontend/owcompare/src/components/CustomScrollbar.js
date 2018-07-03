@@ -10,10 +10,10 @@ import { SEARCH_WIDTH, SEARCH_ITEM_HEIGHT } from '../utils/style-utils';
 SmoothScrollbar.use(OverscrollPlugin);
 
 const StyledScrollbar = styled(Scrollbar)`
-  display: ${propss => (propss.hidden ? 'none !important' : 'block')};
+  display: ${({ hidden }) => (hidden ? 'none !important' : 'block')};
   width: ${SEARCH_WIDTH - 15}px;
-  height: ${propss =>
-    propss.len < 8 ? `${propss.len * SEARCH_ITEM_HEIGHT}px` : `${SEARCH_ITEM_HEIGHT * 8}px`};
+  height: ${({ len }) =>
+    len < 8 ? `${len * SEARCH_ITEM_HEIGHT}px` : `${SEARCH_ITEM_HEIGHT * 8}px`};
   margin: auto;
   border-bottom: 1px solid #ff81002b;
 `;

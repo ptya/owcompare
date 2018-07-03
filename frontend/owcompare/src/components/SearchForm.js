@@ -24,8 +24,8 @@ const StyledInput = styled.input`
   width: ${SEARCH_WIDTH}px;
   /* margin: auto; */
   padding-left: 25px;
-  ${propss =>
-    propss.err &&
+  ${({ err }) =>
+    err &&
     css`
       animation: ${errSearch} 0.5s 0s 1 ease-in-out;
     `};

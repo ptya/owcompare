@@ -9,11 +9,10 @@ const StyledButton = styled.button`
   padding: 6px 0;
   border: 1px solid rgba(255, 129, 0, 0.17);
   transition: all 0.1s;
-  background: ${propss =>
-    propss.active ? 'rgba(243, 241, 212, 0.9)' : 'rgba(255, 254, 254, 0.9)'};
+  background: ${({ active }) => (active ? 'rgba(243, 241, 212, 0.9)' : 'rgba(255, 254, 254, 0.9)')};
   width: 100%;
-  ${propss =>
-    propss.active &&
+  ${({ active }) =>
+    active &&
     css`
       border: 1px solid rgba(255, 129, 0, 0.4);
       letter-spacing: 1px;

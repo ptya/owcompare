@@ -22,9 +22,9 @@ const StyledButton = styled.button`
   flex-grow: 1;
   background: none;
   border: none;
-  text-align: ${propss => (propss.right ? 'right' : 'left')};
-  margin-left: ${propss => (propss.right ? '20%' : '0')};
-  margin-right: ${propss => (propss.right ? '0' : '20%')};
+  text-align: ${({ right }) => (right ? 'right' : 'left')};
+  margin-left: ${({ right }) => (right ? '20%' : '0')};
+  margin-right: ${({ right }) => (right ? '0' : '20%')};
 
   &:hover {
     font-size: 2rem;
