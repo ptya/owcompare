@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import heroes from '../data/heroes';
 
@@ -8,6 +9,13 @@ import Selection from './Selection';
 import Recommend from './Recommend';
 
 import { getRandomPoints } from '../utils/helper';
+
+const StyledBackground = styled.div`
+  background-image: url(images/background2x.png);
+  background-size: cover;
+  background-color: rgb(44, 36, 89, 0.75);
+  height: 100vh;
+`;
 
 class Compare extends Component {
   static Search = Search;
@@ -89,7 +97,7 @@ class Compare extends Component {
     const { children } = this.props;
 
     return (
-      <Fragment>
+      <StyledBackground>
         {children(
           allHeroes,
           err,
@@ -102,7 +110,7 @@ class Compare extends Component {
           updateSelected,
           removeSelected
         )}
-      </Fragment>
+      </StyledBackground>
     );
   }
 }
