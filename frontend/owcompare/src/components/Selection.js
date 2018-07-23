@@ -25,7 +25,7 @@ const StyledUl = styled.ul`
   display: flex;
   flex-wrap: wrap;
   max-width: ${MAXWIDTH}vw;
-  height: ${Math.round(MAXHEIGHT / 3)}vh;
+  height: ${Math.round(MAXHEIGHT * 0.46)}vh;
   /* background: none; */
   justify-content: flex-start;
 `;

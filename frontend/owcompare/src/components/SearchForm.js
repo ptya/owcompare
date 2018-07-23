@@ -14,21 +14,34 @@ const StyledForm = styled.form`
   position: absolute;
   width: 100%;
   text-align: center;
-  top: -${SEARCHBAR_HEIGHT / 2}px;
+  top: calc((${SEARCHBAR_HEIGHT}px + 3rem) / -2);
 `;
 
 const StyledInput = styled.input`
-  border: 1px solid #a9a9a9;
+  border: 0.5px solid #43484c;
+  border-radius: 5px;
+  background-color: #218ffe;
+  box-shadow: 2px 4px 4px rgba(0,0,0,0.25), inset 0 1px 4px rgba(0,0,0,0.25);
   box-sizing: border-box;
-  height: ${SEARCHBAR_HEIGHT}px;
+  color: rgba(255, 255, 255, 1);
+  font-size: 100%;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  /* height: ${SEARCHBAR_HEIGHT}px; */
   width: ${SEARCH_WIDTH}px;
-  /* margin: auto; */
-  padding-left: 25px;
+  padding: 1.5rem 0 1.5rem 1.5rem;
   ${({ err }) =>
     err &&
     css`
       animation: ${errSearch} 0.5s 0s 1 ease-in-out;
     `};
+
+  $:after {
+    content: url(images/SearchIco.png);
+  }
+
+  ::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
 `;
 
 const SearchForm = props => {

@@ -9,4 +9,7 @@ export default () => injectGlobal`
   button:focus {
     outline: none;
   }
+  html {
+    font-size: 14px;
+  }
 `;
