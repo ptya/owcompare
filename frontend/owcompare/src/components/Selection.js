@@ -8,7 +8,14 @@ import { MAXHEIGHT, MAXWIDTH } from '../utils/style-utils';
 
 const StyledButton = styled.button`
   position: absolute;
-  right: 0;
+  left: 5px;
+  top: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+  background: rgba(64, 82, 117, 0.75);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0 0.4em 0 0.4em;
+  font-size: 1.5em;
   &:hover {
     cursor: pointer;
   }
@@ -19,7 +26,7 @@ const StyledUl = styled.ul`
   flex-wrap: wrap;
   max-width: ${MAXWIDTH}vw;
   height: ${Math.round(MAXHEIGHT / 3)}vh;
-  background: red;
+  /* background: none; */
   justify-content: flex-start;
 `;
 
@@ -28,8 +35,10 @@ const StyledLi = styled.li`
   flex-grow: 0;
   position: relative;
   /* //padding: 2px; */
-  background: yellow;
+  background: rgba(255, 255, 255, 0.5);
   height: 50%;
+  box-sizing: border-box;
+  border: 2px solid #f99e1a;
 `;
 
 class Selection extends Component {
