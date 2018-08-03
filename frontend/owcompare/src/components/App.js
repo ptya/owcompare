@@ -1,7 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
 import Compare from './Compare';
 import baseStyles from '../styles';
+
+const StyledBackground = styled.div`
+  background-image: url(images/background2x.png);
+  background-size: cover;
+  background-color: rgb(44, 36, 89, 0.75);
+  height: 100vh;
+`;
 
 const App = () => {
   baseStyles();
@@ -19,7 +27,7 @@ const App = () => {
         updateSelected,
         removeSelected
       ) => (
-        <Fragment>
+        <StyledBackground>
           <Compare.Selection
             selectedHeroes={selectedHeroes}
             removeSelected={removeSelected}
@@ -39,7 +47,7 @@ const App = () => {
             allHeroes={allHeroes}
             points={points}
           />
-        </Fragment>
+        </StyledBackground>
       )}
     </Compare>
   );
