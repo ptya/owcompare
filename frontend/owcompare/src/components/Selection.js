@@ -34,8 +34,6 @@ const StyledLi = styled.li`
   flex-basis: ${MAXWIDTH / 3}%;
   flex-grow: 0;
   position: relative;
-  /* //padding: 2px; */
-  background: rgba(255, 255, 255, 0.5);
   height: 50%;
   box-sizing: border-box;
   border: 2px solid #f99e1a;
