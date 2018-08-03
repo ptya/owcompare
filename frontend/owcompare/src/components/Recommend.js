@@ -32,6 +32,41 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledTitle = styled.h1`
+  font-family: 'Righteous', cursive;
+  font-size: 36px;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+`;
+
+const StyledName = styled.span`
+  font-family: 'Righteous', cursive;
+  font-size: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+  color: rgba(255,255,255,100);
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+`;
+
 class Recommend extends Component {
   state = {
     position: 0,
@@ -88,7 +123,9 @@ class Recommend extends Component {
       <Fragment>
         {heroToShow && (
           <StyledWrapper>
+            <StyledTitle>Your best bet</StyledTitle>
             <Hero recommended hero={hero} />
+            <StyledName>{hero.name}</StyledName>
             <StyledFlexDiv>
               <StyledButton onClick={() => this.prevHero()}> ◄ </StyledButton>
               <StyledButton right onClick={() => this.nextHero()}>
