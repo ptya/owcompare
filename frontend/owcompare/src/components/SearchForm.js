@@ -35,13 +35,20 @@ const StyledInput = styled.input`
       animation: ${errSearch} 0.5s 0s 1 ease-in-out;
     `};
 
-  $:after {
-    content: url(images/SearchIco.png);
-  }
-
   ::placeholder {
     color: rgba(255, 255, 255, 0.6);
   }
+`;
+
+const StyledIco = styled.i`
+  background-image: url(images/SearchIco.png);
+  background-size: cover;
+  width: 19px;
+  height: 19px;
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: ${SEARCH_WIDTH}px;
 `;
 
 const SearchForm = props => {
@@ -70,6 +77,7 @@ const SearchForm = props => {
           onBlur={handleBlur}
           onKeyDown={handleKeyDown}
         />
+        <StyledIco />
         {children}
       </StyledForm>
     </StyledDiv>
