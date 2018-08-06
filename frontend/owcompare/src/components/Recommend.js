@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Hero from './Hero';
 import Circle from './Circle';
+import Arrow from './Arrow';
 import { RECOMMEND_HEIGHT } from '../utils/style-utils';
 
 const StyledWrapper = styled.div`
@@ -24,23 +25,14 @@ const StyledFlexDiv = styled.div`
 `;
 
 const StyledButton = styled.button`
-  font-family: 'Astloch', cursive;
   flex-grow: 1;
   background: none;
   height: 100%;
   border: none;
-  text-align: ${({ right }) => (right ? 'right' : 'left')};
-  margin-left: ${({ right }) => (right ? '20%' : '0')};
-  margin-right: ${({ right }) => (right ? '0' : '20%')};
-  font-size: 96px;
-  color: rgba(249, 158, 26, 0.7);
-  text-shadow: -1px -1px 0 rgba(249, 158, 26, 0.7), 1px -1px 0 rgba(249, 158, 26, 0.7),
-    -1px 1px 0 rgba(249, 158, 26, 0.7), 1px 1px 0 rgba(249, 158, 26, 0.7);
+  margin-left: ${({ right }) => (right ? '32%' : '0')};
+  margin-right: ${({ right }) => (right ? '0' : '32%')};
 
   &:hover {
-    color: rgba(249, 158, 26, 1);
-    text-shadow: -1px -1px 0 rgba(249, 158, 26, 1), 1px -1px 0 rgba(249, 158, 26, 1),
-      -1px 1px 0 rgba(249, 158, 26, 1), 1px 1px 0 rgba(249, 158, 26, 1);
     cursor: pointer;
   }
 `;
@@ -144,9 +136,11 @@ class Recommend extends Component {
             <Hero recommended hero={hero} />
             <StyledName>{hero.name}</StyledName>
             <StyledFlexDiv>
-              <StyledButton onClick={() => this.prevHero()}> &lt; </StyledButton>
-              <StyledButton right onClick={() => this.nextHero()}>
-                &gt;
+              <StyledButton type="button" onClick={() => this.prevHero()}>
+                <Arrow />
+              </StyledButton>
+              <StyledButton type="button" right onClick={() => this.nextHero()}>
+                <Arrow right />
               </StyledButton>
             </StyledFlexDiv>
             <StyledFlexDiv bottom>
