@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Hero from './Hero';
 
-import { MAXHEIGHT, MAXWIDTH } from '../utils/style-utils';
+import { SELECTION_HEIGHT, MAXWIDTH } from '../utils/style-utils';
 
 const StyledButton = styled.button`
   position: absolute;
@@ -25,7 +25,7 @@ const StyledUl = styled.ul`
   display: flex;
   flex-wrap: wrap;
   max-width: ${MAXWIDTH}vw;
-  height: ${Math.round(MAXHEIGHT * 0.46)}vh;
+  height: ${SELECTION_HEIGHT}vh;
   /* background: none; */
   justify-content: flex-start;
 `;

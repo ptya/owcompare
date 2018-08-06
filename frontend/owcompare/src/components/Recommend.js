@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Hero from './Hero';
-import { MAXHEIGHT } from '../utils/style-utils';
+import { RECOMMEND_HEIGHT } from '../utils/style-utils';
 
 const StyledWrapper = styled.div`
-  height: ${Math.round((MAXHEIGHT / 3) * 2)}vh;
+  height: ${RECOMMEND_HEIGHT}vh;
   position: relative;
+  overflow: hidden;
 `;
 
 const StyledFlexDiv = styled.div`
@@ -19,15 +20,22 @@ const StyledFlexDiv = styled.div`
 `;
 
 const StyledButton = styled.button`
+  font-family: 'Astloch', cursive;
   flex-grow: 1;
   background: none;
   border: none;
   text-align: ${({ right }) => (right ? 'right' : 'left')};
   margin-left: ${({ right }) => (right ? '20%' : '0')};
   margin-right: ${({ right }) => (right ? '0' : '20%')};
+  font-size: 96px;
+  color: rgba(249, 158, 26, 0.7);
+  text-shadow: -1px -1px 0 rgba(249, 158, 26, 0.7), 1px -1px 0 rgba(249, 158, 26, 0.7),
+    -1px 1px 0 rgba(249, 158, 26, 0.7), 1px 1px 0 rgba(249, 158, 26, 0.7);
 
   &:hover {
-    font-size: 2rem;
+    color: rgba(249, 158, 26, 1);
+    text-shadow: -1px -1px 0 rgba(249, 158, 26, 1), 1px -1px 0 rgba(249, 158, 26, 1),
+      -1px 1px 0 rgba(249, 158, 26, 1), 1px 1px 0 rgba(249, 158, 26, 1);
     cursor: pointer;
   }
 `;
@@ -127,9 +135,9 @@ class Recommend extends Component {
             <Hero recommended hero={hero} />
             <StyledName>{hero.name}</StyledName>
             <StyledFlexDiv>
-              <StyledButton onClick={() => this.prevHero()}> ◄ </StyledButton>
+              <StyledButton onClick={() => this.prevHero()}> &lt; </StyledButton>
               <StyledButton right onClick={() => this.nextHero()}>
-                ►
+                &gt;
               </StyledButton>
             </StyledFlexDiv>
           </StyledWrapper>
