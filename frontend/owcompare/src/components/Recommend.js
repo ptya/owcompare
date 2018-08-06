@@ -151,7 +151,8 @@ class Recommend extends Component {
             </StyledFlexDiv>
             <StyledFlexDiv bottom>
               {recommendedHeroes.map(
-                item => (hero.id === item ? <StyledCircle filled /> : <StyledCircle />)
+                (item, i) =>
+                  hero.id === item ? <StyledCircle key={i} filled /> : <StyledCircle key={i} />
               )}
             </StyledFlexDiv>
           </StyledWrapper>
