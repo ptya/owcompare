@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Hero from './Hero';
+import Circle from './Circle';
 import { RECOMMEND_HEIGHT } from '../utils/style-utils';
 
 const StyledWrapper = styled.div`
@@ -19,6 +20,7 @@ const StyledFlexDiv = styled.div`
   top: 0;
   align-items: ${({ bottom }) => (bottom ? 'flex-end' : 'flex-start')};
   z-index: ${({ bottom }) => (bottom ? 0 : 1)};
+  justify-content: center;
 `;
 
 const StyledButton = styled.button`
@@ -78,6 +80,10 @@ const StyledName = styled.span`
 }
 `;
 
+const StyledCircle = styled(Circle)`
+  padding-bottom: 10px;
+`;
+
 class Recommend extends Component {
   state = {
     position: 0,
@@ -130,8 +136,6 @@ class Recommend extends Component {
     const { position } = this.state;
     const hero = allHeroes[recommendedHeroes[position]] || '';
 
-    console.log(recommendedHeroes);
-
     return (
       <Fragment>
         {heroToShow && (
@@ -145,7 +149,11 @@ class Recommend extends Component {
                 &gt;
               </StyledButton>
             </StyledFlexDiv>
-            <StyledFlexDiv bottom>Hey</StyledFlexDiv>
+            <StyledFlexDiv bottom>
+              {recommendedHeroes.map(
+                item => (hero.id === item ? <StyledCircle filled /> : <StyledCircle />)
+              )}
+            </StyledFlexDiv>
           </StyledWrapper>
         )}
       </Fragment>
