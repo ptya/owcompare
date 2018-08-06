@@ -5,14 +5,14 @@ import styled from 'styled-components';
 const StyledCirlce = styled.svg`
   height: ${({ diameter }) => diameter}px;
   width: ${({ diameter }) => diameter}px;
-  margin: 15px;
+  margin: 15px 5px;
 `;
 
 class Circle extends Component {
   static defaultProps = {
-    diameter: 15,
+    diameter: 20,
     strokeWidth: 2,
-    stroke: 'rgba(255,255,255,0.8)',
+    stroke: 'rgba(255,255,255,0.9)',
     filled: false,
   };
 
