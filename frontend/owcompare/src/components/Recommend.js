@@ -15,14 +15,17 @@ const StyledFlexDiv = styled.div`
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
   display: flex;
+  top: 0;
+  align-items: ${({ bottom }) => (bottom ? 'flex-end' : 'flex-start')};
+  z-index: ${({ bottom }) => (bottom ? 0 : 1)};
 `;
 
 const StyledButton = styled.button`
   font-family: 'Astloch', cursive;
   flex-grow: 1;
   background: none;
+  height: 100%;
   border: none;
   text-align: ${({ right }) => (right ? 'right' : 'left')};
   margin-left: ${({ right }) => (right ? '20%' : '0')};
@@ -127,6 +130,8 @@ class Recommend extends Component {
     const { position } = this.state;
     const hero = allHeroes[recommendedHeroes[position]] || '';
 
+    console.log(recommendedHeroes);
+
     return (
       <Fragment>
         {heroToShow && (
@@ -140,6 +145,7 @@ class Recommend extends Component {
                 &gt;
               </StyledButton>
             </StyledFlexDiv>
+            <StyledFlexDiv bottom>Hey</StyledFlexDiv>
           </StyledWrapper>
         )}
       </Fragment>
