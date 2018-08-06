@@ -1,22 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledCirlce = styled.svg`
+  height: ${({ diameter }) => diameter}px;
+  width: ${({ diameter }) => diameter}px;
+  margin: 15px;
+`;
 
 class Circle extends Component {
-  static defaultProps = { diameter: 100, strokeWidth: 3, stroke: 'black', fill: 'none' };
+  static defaultProps = {
+    diameter: 15,
+    strokeWidth: 2,
+    stroke: 'rgba(255,255,255,0.8)',
+    filled: false,
+  };
 
   render() {
-    const { diameter, strokeWidth, stroke, fill } = this.props;
+    const { diameter, strokeWidth, stroke, filled } = this.props;
+    const fill = filled ? stroke : 'none';
     return (
-      <svg height={diameter} width={diameter}>
+      <StyledCirlce diameter={diameter}>
         <circle
           cx={diameter / 2}
           cy={diameter / 2}
-          r={diameter - 2 * strokeWidth}
+          r={diameter / 2 - strokeWidth / 2}
           stroke={stroke}
           strokeWidth={strokeWidth}
           fill={fill}
         />
-      </svg>
+      </StyledCirlce>
     );
   }
 }
@@ -25,7 +38,7 @@ Circle.propTypes = {
   diameter: PropTypes.number,
   strokeWidth: PropTypes.number,
   stroke: PropTypes.string,
-  fill: PropTypes.string,
+  filled: PropTypes.bool,
 };
 
 export default Circle;
