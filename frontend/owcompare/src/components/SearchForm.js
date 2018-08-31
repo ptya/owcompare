@@ -50,7 +50,7 @@ const StyledIco = styled.i`
   top: 20px;
   left: ${SEARCH_WIDTH}px;
 `;
-
+// TODO: turn this into controlled component completely! https://tylermcginnis.com/react-interview-questions
 const SearchForm = props => {
   const {
     children,
